@@ -20,14 +20,21 @@ public class OyxgenManager : MonoBehaviour {
 	// modify this to change the amount of oxygen you regain per checkpoint
 	public float oxygenRegenCheckpointTime = 50;
 
+	public bool countdownToggle = false;
+
     void Start()
     {
         
     }
     
     void Update() {
+<<<<<<< Updated upstream
 	    oxygen -= Time.deltaTime * passiveSubtractTime;
 		//Debug.Log(oxygen);
+=======
+	    if(countdownToggle) oxygen -= Time.deltaTime * passiveSubtractTime;
+		if(oxygen <= 0)FindObjectOfType<PlayerMovement>().setIsAlive(false);
+>>>>>>> Stashed changes
     }
 
     public void jumpDeplete() {
