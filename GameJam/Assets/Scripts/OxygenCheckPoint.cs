@@ -15,7 +15,8 @@ public class OxygenCheckPoint : MonoBehaviour
 
     // Update is called once per frame
     void OnTriggerEnter2D(){
-        Debug.Log("we hit something");
+        FindObjectOfType<OyxgenManager>().oxygenRegenCheckpoint();
+        FindObjectOfType<OyxgenManager>().oxygenSaveCheckPoint();
     }
 
 
