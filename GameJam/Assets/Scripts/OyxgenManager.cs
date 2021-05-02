@@ -23,31 +23,35 @@ public class OyxgenManager : MonoBehaviour {
 	// modify this to change the amount of oxygen you regain per checkpoint
 	public float oxygenRegenCheckpointTime = 50;
 
+	public bool oxygenCountdownToggle = false;
+
     void Start()
     {
         
     }
     
     void Update() {
-	    oxygen -= Time.deltaTime * passiveSubtractTime;
+	    if(oxygenCountdownToggle) oxygen -= Time.deltaTime * passiveSubtractTime;
 		if(oxygen <= 0)FindObjectOfType<PlayerMovement>().setIsAlive(false);
     }
 
     public void jumpDeplete() {
-	    oxygen -= jumpSubtractTime;
+		if (oxygenCountdownToggle) oxygen -= jumpSubtractTime;
     }
 
     public void moveDeplete() {
-	    oxygen -= moveSubtractTime;
+		if (oxygenCountdownToggle) oxygen -= moveSubtractTime;
     }
 
     public void oxygenRegenPickuo() {
 	    oxygen += oxygenRegenPickupTime;
+		if (oxygen > 1000) oxygen = 1000;
     }
 
     public void oxygenRegenCheckpoint() {
 	    oxygen += oxygenRegenCheckpointTime;
-    }
+		if (oxygen > 1000) oxygen = 1000;
+	}
 
 	public void oxygenSaveCheckPoint() {
 	    oxygenLastCheck = oxygen;
