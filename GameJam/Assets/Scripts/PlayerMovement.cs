@@ -8,12 +8,9 @@ public class PlayerMovement : MonoBehaviour
 
     public float speed; // Player speed
     public float jumpForce; // Player jump height
-    private bool isAlive = true; // Player's living status
+
     public float fallMultiplier = 2.5f;
     public float lowJumpMultiplier = 2f;
-
-    public float coyoteTime;
-    private float coyoteCounter;
 
     private float h; //Horizontal movement
     private Rigidbody2D rb;
@@ -28,7 +25,9 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask whatIsGround; // Checks for objects in the Ground layer (Layer 8)
 
     // Wall Jumping
+    private bool isWallJumping; // Checks if player is wall jumping
     public float xWallForce; // x-axis wall jump force
+    public float yWallForce; // y-axis wall jump force
     public float wallJumpTime = 2f; // Wall jump time
     private float wallJumpCounter; // Wall Jump counter
 
@@ -50,116 +49,75 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if(isAlive == true){
-            if (wallJumpCounter <= 0) // Tests if wall jump counter is less than or equal to 0 (not in wall jump state)
+        isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround); // Defines touching gound
+        isTouchingLeft = Physics2D.OverlapCircle(leftPos.position, checkRadius, whatIsGround);
+        isTouchingRight = Physics2D.OverlapCircle(rightPos.position, checkRadius, whatIsGround);
+
+        // Normal jumping
+
+        if (isGrounded && Input.GetKeyDown(KeyCode.Space)) {
+            isJumping = true;
+            jumpTimeCounter = jumpTime;
+            rb.velocity = Vector2.up * jumpForce;
+        }
+
+        if (Input.GetKey(KeyCode.Space) && isJumping) {
+            if (jumpTimeCounter > 0)
             {
-                isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround); // Defines touching gound
-                isTouchingLeft = Physics2D.OverlapCircle(leftPos.position, checkRadius, whatIsGround);
-                isTouchingRight = Physics2D.OverlapCircle(rightPos.position, checkRadius, whatIsGround);
-
-                // Normal jumping
-
-                if (isGrounded && Input.GetKeyDown(KeyCode.Space))
-                {
-                    isJumping = true;
-                    jumpTimeCounter = jumpTime;
-                    rb.velocity = Vector2.up * jumpForce;
-                    FindObjectOfType<OyxgenManager>().jumpDeplete();
-                }
-
-                if (Input.GetKey(KeyCode.Space) && isJumping)
-                {
-                    if (jumpTimeCounter > 0)
-                    {
-                        rb.velocity = Vector2.up * jumpForce;
-                        jumpTimeCounter -= Time.deltaTime;
-                    }
-                    else
-                    {
-                        isJumping = false;
-                    }
-
-                }
-
-                if (Input.GetKeyUp(KeyCode.Space))
-                {
-                    isJumping = false;
-                }
-
-                if (rb.velocity.y > 0)
-                {
-                    rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
-                }
-
-                // Coyote Time
-                if (isGrounded)
-                {
-                    coyoteCounter = coyoteTime;
-                }
-
-                if (!isJumping && !isGrounded) {
-                    coyoteCounter -= Time.deltaTime;
-                }
-
-                if (!isJumping && !isGrounded && coyoteCounter > 0 && Input.GetKeyDown(KeyCode.Space)) {
-                    isJumping = true;
-                    jumpTimeCounter = jumpTime;
-                    rb.velocity = Vector2.up * jumpForce;
-                    FindObjectOfType<OyxgenManager>().jumpDeplete();
-                }
-
-
-                // Wall jumping
-
-                if (!isGrounded && (isTouchingLeft || isTouchingRight)) // Wall touching detection
-                {
-                    if (Input.GetAxisRaw("Horizontal") > 0 || Input.GetAxisRaw("Horizontal") < 0) // Basically you can only wall jump if you're holding into the wall
-                    {
-                        isTouchingWall = true;
-                    }
-                    else
-                    {
-                        isTouchingWall = false;
-                    }
-                }
-                else
-                {
-                    isTouchingWall = false;
-                }
-
-                //Debug.Log(isTouchingWall);
-
-                if (isTouchingWall) // Wall jump logic
-                {
-                    if (Input.GetButtonDown("Jump")) {
-                        wallJumpCounter = wallJumpTime;
-                        rb.velocity = new Vector2(-h * xWallForce * speed * Time.deltaTime, jumpForce + 5);
-                    }
-                }
+                rb.velocity = Vector2.up * jumpForce;
+                jumpTimeCounter -= Time.deltaTime;
             }
             else {
-                wallJumpCounter -= Time.deltaTime;
+                isJumping = false;
+            }
+
+        }
+
+        if (Input.GetKeyUp(KeyCode.Space)) {
+            isJumping = false;
+        }
+
+        if (rb.velocity.y > 0) {
+            rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+        }
+
+        // Wall jumping
+
+        if (!isGrounded && (isTouchingLeft || isTouchingRight))
+        {
+            if (Input.GetAxisRaw("Horizontal") > 0 || Input.GetAxisRaw("Horizontal") < 0)
+            {
+                isTouchingWall = true;
+            }
+            else {
+                isTouchingWall = false;
             }
         }
+        else {
+            isTouchingWall = false;
+        }
+
+        Debug.Log(isTouchingWall);
+
+        if (isTouchingWall) {
+            wallJumpCounter = wallJumpTime;
+        }
+
 
     }
 
     void FixedUpdate()
     {
-        if(isAlive == true){
-            h = Input.GetAxis("Horizontal");
-            if(h != 0)FindObjectOfType<OyxgenManager>().moveDeplete();
-        }
-        if (wallJumpCounter <= 0)
+
+        h = Input.GetAxis("Horizontal");
+
+        if (wallJumpCounter <= 0) ;
         {
             rb.velocity = new Vector2(h * speed * Time.deltaTime, rb.velocity.y);
         }
     }
 
-    public void setIsAlive(bool isAlive){
-        this.isAlive = isAlive;
-        h = 0;
-        Debug.Log("Player is dead");
+    void SetWallJumpToFalse() {
+        isWallJumping = false;
     }
-
 }
