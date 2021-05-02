@@ -12,7 +12,7 @@ public class OyxgenManager : MonoBehaviour {
 	public float passiveSubtractTime = 1;
 	
 	// modify this to change the amount of oxygen you Lose during jumping
-	public float jumpSubtractTime = 2;
+	public float jumpSubtractTime = 5;
 	
 	// modify this to change the amount of oxygen you Lose during movement
 	public float moveSubtractTime = 1.5f;
@@ -33,6 +33,9 @@ public class OyxgenManager : MonoBehaviour {
     void Update() {
 	    if(oxygenCountdownToggle) oxygen -= Time.deltaTime * passiveSubtractTime;
 		if(oxygen <= 0)FindObjectOfType<PlayerMovement>().setIsAlive(false);
+		
+		
+		
     }
 
     public void jumpDeplete() {
