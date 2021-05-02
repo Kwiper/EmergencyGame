@@ -676,7 +676,7 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
-  xWallForce: 30
+  xWallForce: 5
   wallJumpTime: 0.05
   feetPos: {fileID: 702298776}
   leftPos: {fileID: 541403696}
