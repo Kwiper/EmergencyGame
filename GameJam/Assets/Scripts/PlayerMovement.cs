@@ -12,6 +12,9 @@ public class PlayerMovement : MonoBehaviour
     public float fallMultiplier = 2.5f;
     public float lowJumpMultiplier = 2f;
 
+    public float coyoteTime;
+    private float coyoteCounter;
+
     private float h; //Horizontal movement
     private Rigidbody2D rb;
 
@@ -25,7 +28,6 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask whatIsGround; // Checks for objects in the Ground layer (Layer 8)
 
     // Wall Jumping
-    private bool isWallJumping; // Checks if player is wall jumping
     public float xWallForce; // x-axis wall jump force
     public float wallJumpTime = 2f; // Wall jump time
     private float wallJumpCounter; // Wall Jump counter
@@ -88,6 +90,24 @@ public class PlayerMovement : MonoBehaviour
                 {
                     rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
                 }
+
+                // Coyote Time
+                if (isGrounded)
+                {
+                    coyoteCounter = coyoteTime;
+                }
+
+                if (!isJumping && !isGrounded) {
+                    coyoteCounter -= Time.deltaTime;
+                }
+
+                if (!isJumping && !isGrounded && coyoteCounter > 0 && Input.GetKeyDown(KeyCode.Space)) {
+                    isJumping = true;
+                    jumpTimeCounter = jumpTime;
+                    rb.velocity = Vector2.up * jumpForce;
+                    FindObjectOfType<OyxgenManager>().jumpDeplete();
+                }
+
 
                 // Wall jumping
 

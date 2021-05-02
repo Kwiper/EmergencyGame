@@ -671,6 +671,7 @@ MonoBehaviour:
   jumpForce: 12
   fallMultiplier: 2.5
   lowJumpMultiplier: 2
+  coyoteTime: 0.05
   checkRadius: 0.5
   whatIsGround:
     serializedVersion: 2
@@ -750,6 +751,7 @@ MonoBehaviour:
   moveSubtractTime: 0.1
   oxygenRegenPickupTime: 25
   oxygenRegenCheckpointTime: 50
+  oxygenCountdownToggle: 0
 --- !u!4 &1448691026
 Transform:
   m_ObjectHideFlags: 0
