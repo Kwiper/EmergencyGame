@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Threading;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -57,6 +54,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (isGrounded && Input.GetKeyDown(KeyCode.Space)) {
             isJumping = true;
+            FindObjectOfType<OyxgenManager>().jumpDeplete();
             jumpTimeCounter = jumpTime;
             rb.velocity = Vector2.up * jumpForce;
         }
@@ -97,7 +95,7 @@ public class PlayerMovement : MonoBehaviour
             isTouchingWall = false;
         }
 
-        Debug.Log(isTouchingWall);
+        //Debug.Log(isTouchingWall);
 
         if (isTouchingWall) {
             wallJumpCounter = wallJumpTime;
@@ -110,8 +108,9 @@ public class PlayerMovement : MonoBehaviour
     {
 
         h = Input.GetAxis("Horizontal");
+        if(h != 0)FindObjectOfType<OyxgenManager>().moveDeplete();
 
-        if (wallJumpCounter <= 0) ;
+        if (wallJumpCounter <= 0) 
         {
             rb.velocity = new Vector2(h * speed * Time.deltaTime, rb.velocity.y);
         }
