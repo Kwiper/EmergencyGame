@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
 
     public float checkRadius;
     public LayerMask whatIsGround; // Checks for objects in the Ground layer (Layer 8)
-    public LayerMask lastSurface; //stores last touched surface for wall jump
+    
 
     // Wall Jumping
     public float xWallForce; // x-axis wall jump force
@@ -114,8 +114,7 @@ public class PlayerMovement : MonoBehaviour
 
                 if (!isGrounded && (isTouchingLeft || isTouchingRight)) // Wall touching detection
                 {
-                    if (Input.GetAxisRaw("Horizontal") > 0 && lastSurface != whatIsGround || 
-                        Input.GetAxisRaw("Horizontal") < 0 && lastSurface != whatIsGround) // Basically you can only wall jump if you're holding into the wall
+                    if (Input.GetAxisRaw("Horizontal") > 0 || Input.GetAxisRaw("Horizontal") < 0 ) // Basically you can only wall jump if you're holding into the wall
                     {
                         isTouchingWall = true;
                     }
@@ -136,7 +135,7 @@ public class PlayerMovement : MonoBehaviour
                     if (Input.GetButtonDown("Jump")) {
                         wallJumpCounter = wallJumpTime;
                         rb.velocity = new Vector2(-h * xWallForce * speed * Time.deltaTime, jumpForce + 5);
-                        if (lastSurface != whatIsGround) lastSurface = whatIsGround;
+                        
                     }
                 }
             }
