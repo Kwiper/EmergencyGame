@@ -27,7 +27,7 @@ public class OyxgenManager : MonoBehaviour {
     
     void Update() {
 	    oxygen -= Time.deltaTime * passiveSubtractTime;
-		Debug.Log(oxygen);
+		//Debug.Log(oxygen);
     }
 
     public void jumpDeplete() {
