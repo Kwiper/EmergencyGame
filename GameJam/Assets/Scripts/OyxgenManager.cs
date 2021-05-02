@@ -5,6 +5,9 @@ using UnityEngine;
 public class OyxgenManager : MonoBehaviour {
 	public float oxygen = 1000;
 	
+	// stores the last value of oxygen at a checkpoint
+	public float oxygenLastCheck;
+
 	// modify this to change the amount of oxygen you lose passively
 	public float passiveSubtractTime = 1;
 	
@@ -27,7 +30,7 @@ public class OyxgenManager : MonoBehaviour {
     
     void Update() {
 	    oxygen -= Time.deltaTime * passiveSubtractTime;
-		Debug.Log(oxygen);
+		if(oxygen <= 0)FindObjectOfType<PlayerMovement>().setIsAlive(false);
     }
 
     public void jumpDeplete() {
@@ -44,5 +47,9 @@ public class OyxgenManager : MonoBehaviour {
 
     public void oxygenRegenCheckpoint() {
 	    oxygen += oxygenRegenCheckpointTime;
+    }
+
+	public void oxygenSaveCheckPoint() {
+	    oxygenLastCheck = oxygen;
     }
 }
