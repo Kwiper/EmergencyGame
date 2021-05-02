@@ -676,14 +676,7 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
-<<<<<<< Updated upstream
   xWallForce: 20
-=======
-  lastSurface:
-    serializedVersion: 2
-    m_Bits: 0
-  xWallForce: 15
->>>>>>> Stashed changes
   wallJumpTime: 0.05
   feetPos: {fileID: 702298776}
   leftPos: {fileID: 541403696}
