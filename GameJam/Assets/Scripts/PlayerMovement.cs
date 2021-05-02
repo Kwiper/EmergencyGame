@@ -1,167 +1,221 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.Threading;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
 
-    public float speed; // Player speed
-    public float jumpForce; // Player jump height
-    private bool isAlive = true; // Player's living status
-    public float fallMultiplier = 2.5f;
-    public float lowJumpMultiplier = 2f;
+    public bool isAlive = true;
 
-    public float coyoteTime;
-    private float coyoteCounter;
+    private float movementInputDirection;
 
-    private float h; //Horizontal movement
-    private Rigidbody2D rb;
+    private int facingDirection = 1;
 
-    private bool isGrounded; // Tests if player is touching the ground
-    private bool isTouchingLeft; // Tests if player is touching wall on left
-    private bool isTouchingRight; // Tests if player is touching wall on right
-    private bool isTouchingWall; // Tests if touching wall
-
-
-    public float checkRadius;
-    public LayerMask whatIsGround; // Checks for objects in the Ground layer (Layer 8)
-    
-
-    // Wall Jumping
-    public float xWallForce; // x-axis wall jump force
-    public float wallJumpTime = 2f; // Wall jump time
-    private float wallJumpCounter; // Wall Jump counter
-
-
-    public Transform feetPos;
-    public Transform leftPos;
-    public Transform rightPos;
-
-    private float jumpTimeCounter;
-    public float jumpTime;
+    private bool isFacingRight = true;
+    private bool isWalking;
+    private bool isGrounded;
+    private bool isTouchingWall;
+    private bool isWallSliding;
+    private bool canJump;
     private bool isJumping;
 
+    public float coyoteTime;
+    private float coyoteCount;
 
+    private Rigidbody2D rb;
 
+    public float movementSpeed = 10.0f;
+    public float jumpForce = 16.0f;
+    public float groundCheckRadius;
+    public float wallCheckDistance;
+    public float wallSlideSpeed;
+    public float movementForceInAir;
+    public float airDragMultiplier = 0.95f;
+    public float variableJumpHeightMultiplier = 0.5f;
+    public float wallHopForce;
+    public float wallJumpForce;
+
+    public Vector2 wallHopDirection; // Vector for wall hopping (short wall jump)
+    public Vector2 wallJumpDirection; // Vector for wall jumping (normal wall jump
+
+    public Transform groundCheck; // Checks position relative to ground
+    public Transform wallCheck; // Checks position relative to wall
+
+    public LayerMask whatIsGround; // Tests for ground layer
+
+    // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        wallHopDirection.Normalize();
+        wallJumpDirection.Normalize();
     }
 
+    // Update is called once per frame
     void Update()
     {
-        if(isAlive == true){
-            if (wallJumpCounter <= 0) // Tests if wall jump counter is less than or equal to 0 (not in wall jump state)
-            {
-                isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround); // Defines touching gound
-                isTouchingLeft = Physics2D.OverlapCircle(leftPos.position, checkRadius, whatIsGround);
-                isTouchingRight = Physics2D.OverlapCircle(rightPos.position, checkRadius, whatIsGround);
-
-                // Normal jumping
-
-                if (isGrounded && Input.GetKeyDown(KeyCode.Space))
-                {
-                    isJumping = true;
-                    jumpTimeCounter = jumpTime;
-                    rb.velocity = Vector2.up * jumpForce;
-                    FindObjectOfType<OyxgenManager>().jumpDeplete();
-                }
-
-                if (Input.GetKey(KeyCode.Space) && isJumping)
-                {
-                    if (jumpTimeCounter > 0)
-                    {
-                        rb.velocity = Vector2.up * jumpForce;
-                        jumpTimeCounter -= Time.deltaTime;
-                    }
-                    else
-                    {
-                        isJumping = false;
-                    }
-
-                }
-
-                if (Input.GetKeyUp(KeyCode.Space))
-                {
-                    isJumping = false;
-                }
-
-                if (rb.velocity.y > 0)
-                {
-                    rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
-                }
-
-                // Coyote Time
-                if (isGrounded)
-                {
-                    coyoteCounter = coyoteTime;
-                }
-
-                if (!isJumping && !isGrounded) {
-                    coyoteCounter -= Time.deltaTime;
-                }
-
-                if (!isJumping && !isGrounded && coyoteCounter > 0 && Input.GetKeyDown(KeyCode.Space)) {
-                    isJumping = true;
-                    jumpTimeCounter = jumpTime;
-                    rb.velocity = Vector2.up * jumpForce;
-                    FindObjectOfType<OyxgenManager>().jumpDeplete();
-                }
-
-
-                // Wall jumping
-
-                if (!isGrounded && (isTouchingLeft || isTouchingRight)) // Wall touching detection
-                {
-                    if (Input.GetAxisRaw("Horizontal") > 0 || Input.GetAxisRaw("Horizontal") < 0 ) // Basically you can only wall jump if you're holding into the wall
-                    {
-                        isTouchingWall = true;
-                    }
-                    else
-                    {
-                        isTouchingWall = false;
-                    }
-                }
-                else
-                {
-                    isTouchingWall = false;
-                }
-
-                //Debug.Log(isTouchingWall);
-
-                if (isTouchingWall) // Wall jump logic
-                {
-                    if (Input.GetButtonDown("Jump")) {
-                        wallJumpCounter = wallJumpTime;
-                        rb.velocity = new Vector2(-h * xWallForce * speed * Time.deltaTime, jumpForce + 5);
-                        
-                    }
-                }
-            }
-            else {
-                wallJumpCounter -= Time.deltaTime;
-            }
-        }
-
-    }
-
-    void FixedUpdate()
-    {
-        if(isAlive == true){
-            h = Input.GetAxis("Horizontal");
-            if(h != 0)FindObjectOfType<OyxgenManager>().moveDeplete();
-        }
-        if (wallJumpCounter <= 0)
+        if (isAlive)
         {
-            rb.velocity = new Vector2(h * speed * Time.deltaTime, rb.velocity.y);
+            CheckInput();
+            CheckMovementDirection();
+            CheckIfCanJump();
+            CheckIfWallSliding();
         }
     }
 
-    public void setIsAlive(bool isAlive){
+    private void FixedUpdate()
+    {
+        if (isAlive)
+        {
+            ApplyMovement();
+            CheckSurroundings();
+        }
+    }
+
+    private void CheckIfWallSliding() // Checks if player is sliding on wall
+    {
+        if (isTouchingWall && !isGrounded && rb.velocity.y < 0)
+        {
+            isWallSliding = true;
+        }
+        else
+        {
+            isWallSliding = false;
+        }
+    }
+
+    private void CheckSurroundings() // Tests for ground or wall
+    {
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
+
+        isTouchingWall = Physics2D.Raycast(wallCheck.position, transform.right, wallCheckDistance, whatIsGround);
+    }
+
+    private void CheckIfCanJump()
+    {
+        if ((isGrounded && rb.velocity.y <= 0) || isWallSliding)
+        {
+            canJump = true;
+        }
+
+    }
+
+    private void CheckMovementDirection() // Checks for player direction
+    {
+        if (isFacingRight && movementInputDirection < 0)
+        {
+            Flip();
+        }
+        else if (!isFacingRight && movementInputDirection > 0)
+        {
+            Flip();
+        }
+
+        if (rb.velocity.x != 0)
+        {
+            isWalking = true;
+        }
+        else
+        {
+            isWalking = false;
+        }
+    }
+
+    private void CheckInput() // Checks for inputs
+    {
+        movementInputDirection = Input.GetAxis("Horizontal");
+
+        if (Input.GetButtonDown("Jump"))
+        {
+            Jump();
+        }
+
+        if (Input.GetButtonUp("Jump"))
+        {
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * variableJumpHeightMultiplier);
+        }
+
+    }
+
+    // Jump logic
+    private void Jump()
+    {
+        if (canJump && !isWallSliding && coyoteCount > 0)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            isJumping = true;
+        }
+        else if (isWallSliding && movementInputDirection == 0 && canJump) //Wall hop
+        {
+            isWallSliding = false;
+            Vector2 forceToAdd = new Vector2(wallHopForce * wallHopDirection.x * -facingDirection, wallHopForce * wallHopDirection.y);
+            rb.AddForce(forceToAdd, ForceMode2D.Impulse);
+            isJumping = true;
+        }
+        else if ((isWallSliding || isTouchingWall) && movementInputDirection != 0 && canJump) // Wall jump
+        {
+            isWallSliding = false;
+            Vector2 forceToAdd = new Vector2(wallJumpForce * wallJumpDirection.x * movementInputDirection, wallJumpForce * wallJumpDirection.y);
+            rb.AddForce(forceToAdd, ForceMode2D.Impulse);
+            isJumping = true;
+        }
+    }
+
+    // Movement logic
+    private void ApplyMovement()
+    {
+
+        if (isGrounded)
+        {
+            rb.velocity = new Vector2(movementSpeed * movementInputDirection, rb.velocity.y);
+            coyoteCount = coyoteTime;
+            isJumping = false;
+        }
+
+        if (!isGrounded && !isJumping && !isWallSliding) {
+            coyoteCount -= Time.deltaTime;
+        }
+
+        else if (!isGrounded && !isWallSliding && movementInputDirection != 0)
+        {
+            Vector2 forceToAdd = new Vector2(movementForceInAir * movementInputDirection, 0);
+            rb.AddForce(forceToAdd);
+
+            if (Mathf.Abs(rb.velocity.x) > movementSpeed)
+            {
+                rb.velocity = new Vector2(movementSpeed * movementInputDirection, rb.velocity.y);
+            }
+        }
+        else if (!isGrounded && !isWallSliding && movementInputDirection == 0)
+        {
+            rb.velocity = new Vector2(rb.velocity.x * airDragMultiplier, rb.velocity.y);
+        }
+
+        if (isWallSliding)
+        {
+            if (rb.velocity.y < -wallSlideSpeed)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, -wallSlideSpeed);
+                isJumping = false;
+            }
+        }
+    }
+    
+    // Flips player direction
+    private void Flip()
+    {
+        if (!isWallSliding)
+        {
+            facingDirection *= -1;
+            isFacingRight = !isFacingRight;
+            transform.Rotate(0.0f, 180.0f, 0.0f);
+        }
+    }
+
+    // Sets player to living
+    public void setIsAlive(bool isAlive)
+    {
         this.isAlive = isAlive;
-        h = 0;
         Debug.Log("Player is dead");
     }
-
 }
