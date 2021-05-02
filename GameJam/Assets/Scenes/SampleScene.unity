@@ -307,7 +307,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 434699907}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 210b679544b724147b6c9205c5ba8111, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -675,8 +675,7 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
-  xWallForce: 25
-  yWallForce: 5
+  xWallForce: 30
   wallJumpTime: 0.05
   feetPos: {fileID: 702298776}
   leftPos: {fileID: 541403696}
