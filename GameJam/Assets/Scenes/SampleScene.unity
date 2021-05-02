@@ -746,8 +746,8 @@ MonoBehaviour:
   oxygen: 1000
   oxygenLastCheck: 0
   passiveSubtractTime: 1
-  jumpSubtractTime: 2
-  moveSubtractTime: 1.5
+  jumpSubtractTime: 5
+  moveSubtractTime: 0.1
   oxygenRegenPickupTime: 25
   oxygenRegenCheckpointTime: 50
 --- !u!4 &1448691026
