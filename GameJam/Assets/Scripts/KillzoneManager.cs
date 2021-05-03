@@ -18,8 +18,10 @@ public class KillzoneManager : MonoBehaviour
 
     }
 
-    void OnTriggerEnter2D()
+    void OnTriggerEnter2D(Collider2D other)
     {
-        FindObjectOfType<OyxgenManager>().oxygen = -1;
+	    if (other.gameObject == player) {
+		    FindObjectOfType<OyxgenManager>().oxygen = -1;
+	    }
     }
 }
