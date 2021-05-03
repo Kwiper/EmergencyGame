@@ -146,6 +146,7 @@ public class PlayerMovement : MonoBehaviour
             isJumping = true;
             FindObjectOfType<OyxgenManager>().jumpDeplete();
             FindObjectOfType<TestCamera>().setJump();
+            coyoteCount = 0;
         }
         else if (isWallSliding && movementInputDirection == 0 && canJump) //Wall hop
         {

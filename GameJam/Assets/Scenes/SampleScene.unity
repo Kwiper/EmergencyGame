@@ -2030,6 +2030,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6476770226528452521, guid: 0782a8c964421e44d93842d889c06d27,
         type: 3}
+      propertyPath: wallHopForce
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6476770226528452521, guid: 0782a8c964421e44d93842d889c06d27,
+        type: 3}
+      propertyPath: wallJumpForce
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6476770226528452521, guid: 0782a8c964421e44d93842d889c06d27,
+        type: 3}
       propertyPath: airDragMultiplier
       value: 0.5
       objectReference: {fileID: 0}
@@ -2037,6 +2047,11 @@ PrefabInstance:
         type: 3}
       propertyPath: movementForceInAir
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6476770226528452521, guid: 0782a8c964421e44d93842d889c06d27,
+        type: 3}
+      propertyPath: wallJumpDirection.y
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 6476770226528452522, guid: 0782a8c964421e44d93842d889c06d27,
         type: 3}
