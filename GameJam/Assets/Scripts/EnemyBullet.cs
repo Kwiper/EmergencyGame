@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Animations;
 
 public class EnemyBullet : MonoBehaviour {
 	private Rigidbody2D rb;
@@ -13,6 +14,10 @@ public class EnemyBullet : MonoBehaviour {
 	    player = GameObject.Find("Player");
         rb = GetComponent<Rigidbody2D>();
         moveDirection = (player.transform.position - transform.position).normalized * speed;
+        Vector2 angleDirection = player.transform.position - transform.position;
+        float angle = Mathf.Atan2(angleDirection.y, -angleDirection.x) * Mathf.Rad2Deg;
+        Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        transform.rotation = rotation;
         rb.velocity = new Vector2(moveDirection.x, moveDirection.y);
 //        Destroy(gameObject, 5f);
     }
