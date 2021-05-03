@@ -10,7 +10,7 @@ public class BasicEnemyBehavior : MonoBehaviour {
 	public GameObject bullet;
 	public float bulletSpeed = 1000f;
 	private bool isWithinTrigger;
-	public float fireRate = 3000f;
+	public float fireRate = 2000f;
 	
 	private float shootTimer;
 	// Start is called before the first frame update
@@ -24,12 +24,15 @@ public class BasicEnemyBehavior : MonoBehaviour {
 	{
 		if (isWithinTrigger) {
 			if(Time.time > shootTimer) {
+				Instantiate(bullet, transform.position, Quaternion.identity);
 				shootTimer = Time.time + fireRate / 1000;
-				Vector2 lastPlayerPos = new Vector2(player.transform.position.x, player.transform.position.y);
-				Vector2 enemyPos = new Vector2(transform.position.x, transform.position.y+2);
-				GameObject projectile = Instantiate(bullet, transform.position, Quaternion.identity);
-				Vector2 direction = enemyPos - lastPlayerPos;
-				projectile.GetComponent<Rigidbody2D>().velocity = direction * 5;
+//				Vector2 lastPlayerPos = new Vector2(player.transform.position.x, player.transform.position.y);
+//				Vector2 enemyPos = new Vector2(transform.position.x, transform.position.y+2);
+
+//				Vector2 direction = enemyPos - lastPlayerPos;
+//				projectile.GetComponent<Rigidbody2D>().velocity = direction * 5;
+//				projectile.transform.position =
+//					Vector2.MoveTowards(projectile.transform.position, direction, bulletSpeed);
 			}
 		}
 	}
