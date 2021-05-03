@@ -2099,8 +2099,33 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6476770226528452516, guid: 0782a8c964421e44d93842d889c06d27,
         type: 3}
+      propertyPath: m_Size.x
+      value: 1.3121362
+      objectReference: {fileID: 0}
+    - target: {fileID: 6476770226528452516, guid: 0782a8c964421e44d93842d889c06d27,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 2.5904725
+      objectReference: {fileID: 0}
+    - target: {fileID: 6476770226528452516, guid: 0782a8c964421e44d93842d889c06d27,
+        type: 3}
       propertyPath: m_Material
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6476770226528452516, guid: 0782a8c964421e44d93842d889c06d27,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.07148147
+      objectReference: {fileID: 0}
+    - target: {fileID: 6476770226528452516, guid: 0782a8c964421e44d93842d889c06d27,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.021134734
+      objectReference: {fileID: 0}
+    - target: {fileID: 6476770226528452516, guid: 0782a8c964421e44d93842d889c06d27,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6476770226528452517, guid: 0782a8c964421e44d93842d889c06d27,
         type: 3}
@@ -2121,6 +2146,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6476770226528452521, guid: 0782a8c964421e44d93842d889c06d27,
+        type: 3}
+      propertyPath: wallCheckDistance
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6476770226528452522, guid: 0782a8c964421e44d93842d889c06d27,
         type: 3}
