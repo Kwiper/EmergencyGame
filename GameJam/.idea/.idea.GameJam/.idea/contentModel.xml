@@ -13,6 +13,7 @@
           <e p="MovingPlatform.cs" t="Include" />
           <e p="OffBlock.cs" t="Include" />
           <e p="OnBlock.cs" t="Include" />
+          <e p="OxygenBar.cs" t="Include" />
           <e p="OxygenCheckPoint.cs" t="Include" />
           <e p="OyxgenManager.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />

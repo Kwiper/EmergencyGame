@@ -27,12 +27,16 @@ public class OyxgenManager : MonoBehaviour {
 	public float oxygenRegenCheckpointTime = 50;
 
 	public bool oxygenCountdownToggle = false;
-    void Start()
+
+	public OxygenBar oxygenBar;
+	
+	void Start()
     {
-        
+        oxygenBar.SetMaxOxygen(oxygen);
     }
     
     void Update() {
+	    oxygenBar.SetOxygen(oxygen);
 	    if(oxygenCountdownToggle) oxygen -= Time.deltaTime * passiveSubtractTime;
 		if(oxygen <= 0)FindObjectOfType<PlayerMovement>().setIsAlive(false);
     }
