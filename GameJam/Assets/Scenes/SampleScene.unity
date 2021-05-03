@@ -222,6 +222,7 @@ MonoBehaviour:
   oxygenLastCheck: 0
   passiveSubtractTime: 1
   jumpSubtractTime: 2
+  wallHopSubtractTime: 1.3
   moveSubtractTime: 1.5
   oxygenRegenPickupTime: 25
   oxygenRegenCheckpointTime: 50
@@ -2012,10 +2013,45 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6476770226528452516, guid: 0782a8c964421e44d93842d889c06d27,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6476770226528452517, guid: 0782a8c964421e44d93842d889c06d27,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 210b679544b724147b6c9205c5ba8111, type: 2}
     - target: {fileID: 6476770226528452518, guid: 0782a8c964421e44d93842d889c06d27,
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6476770226528452521, guid: 0782a8c964421e44d93842d889c06d27,
+        type: 3}
+      propertyPath: wallHopForce
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6476770226528452521, guid: 0782a8c964421e44d93842d889c06d27,
+        type: 3}
+      propertyPath: wallJumpForce
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6476770226528452521, guid: 0782a8c964421e44d93842d889c06d27,
+        type: 3}
+      propertyPath: airDragMultiplier
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6476770226528452521, guid: 0782a8c964421e44d93842d889c06d27,
+        type: 3}
+      propertyPath: movementForceInAir
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6476770226528452521, guid: 0782a8c964421e44d93842d889c06d27,
+        type: 3}
+      propertyPath: wallJumpDirection.y
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 6476770226528452522, guid: 0782a8c964421e44d93842d889c06d27,
         type: 3}
