@@ -34,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
     public float variableJumpHeightMultiplier = 0.5f;
     public float wallHopForce;
     public float wallJumpForce;
-
+	
     public Vector2 wallHopDirection; // Vector for wall hopping (short wall jump)
     public Vector2 wallJumpDirection; // Vector for wall jumping (normal wall jump
 
@@ -42,13 +42,17 @@ public class PlayerMovement : MonoBehaviour
     public Transform wallCheck; // Checks position relative to wall
 
     public LayerMask whatIsGround; // Tests for ground layer
-
+	
+	// This animator is for the player's animations
+	private Animator player_anim;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         wallHopDirection.Normalize();
         wallJumpDirection.Normalize();
+        player_anim = gameObject.GetComponent<Animator>();
+        
     }
 
     // Update is called once per frame
@@ -114,11 +118,13 @@ public class PlayerMovement : MonoBehaviour
         if (rb.velocity.x != 0)
         {
             isWalking = true;
+            player_anim.SetBool("isMoving", true);
             
         }
         else
         {
             isWalking = false;
+            player_anim.SetBool("isMoving", false);
         }
     }
 
