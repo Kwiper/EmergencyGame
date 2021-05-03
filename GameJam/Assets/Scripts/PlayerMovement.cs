@@ -64,6 +64,7 @@ public class PlayerMovement : MonoBehaviour
             CheckMovementDirection();
             CheckIfCanJump();
             CheckIfWallSliding();
+            Animate();
         }
     }
 
@@ -118,13 +119,9 @@ public class PlayerMovement : MonoBehaviour
         if (rb.velocity.x != 0)
         {
             isWalking = true;
-            player_anim.SetBool("isMoving", true);
             
-        }
-        else
-        {
-            isWalking = false;
-            player_anim.SetBool("isMoving", false);
+           
+            
         }
     }
 
@@ -153,6 +150,7 @@ public class PlayerMovement : MonoBehaviour
             isJumping = true;
             FindObjectOfType<OyxgenManager>().jumpDeplete();
             FindObjectOfType<TestCamera>().setJump();
+            coyoteCount = 0;
         }
         else if (isWallSliding && movementInputDirection == 0 && canJump) //Wall hop
         {
@@ -188,7 +186,12 @@ public class PlayerMovement : MonoBehaviour
             coyoteCount -= Time.deltaTime;
             FindObjectOfType<OyxgenManager>().moveDeplete();
         }
+
+        if (!isGrounded && !isWallSliding && movementInputDirection != 0) {
+            rb.velocity = new Vector2(movementSpeed * movementInputDirection, rb.velocity.y);
+        }
         //Air Force movement
+        /*
         else if (!isGrounded && !isWallSliding && movementInputDirection != 0)
         {
             Vector2 forceToAdd = new Vector2(movementForceInAir * movementInputDirection, 0);
@@ -203,6 +206,7 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x * airDragMultiplier, rb.velocity.y);
         }
+        */
 
         if (isWallSliding)
         {
@@ -231,4 +235,15 @@ public class PlayerMovement : MonoBehaviour
         this.isAlive = isAlive;
         Debug.Log("Player is dead");
     }
+
+    private void Animate() {
+	    if(movementInputDirection != 0)
+	    {
+		    player_anim.SetBool("isMoving", true);
+	    }
+	    else {
+		    player_anim.SetBool("isMoving", false); 
+	    }
+    }
+    
 }
