@@ -114,6 +114,7 @@ public class PlayerMovement : MonoBehaviour
         if (rb.velocity.x != 0)
         {
             isWalking = true;
+            
         }
         else
         {

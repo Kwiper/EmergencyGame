@@ -10,6 +10,7 @@
           <e p="BasicEnemyBehavior.cs" t="Include" />
           <e p="EnemyBullet.cs" t="Include" />
           <e p="KillzoneManager.cs" t="Include" />
+          <e p="MovingPlatform.cs" t="Include" />
           <e p="OxygenCheckPoint.cs" t="Include" />
           <e p="OyxgenManager.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
