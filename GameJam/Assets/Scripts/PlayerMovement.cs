@@ -144,6 +144,8 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             isJumping = true;
+            FindObjectOfType<OyxgenManager>().jumpDeplete();
+            FindObjectOfType<TestCamera>().setJump();
         }
         else if (isWallSliding && movementInputDirection == 0 && canJump) //Wall hop
         {
@@ -151,6 +153,7 @@ public class PlayerMovement : MonoBehaviour
             Vector2 forceToAdd = new Vector2(wallHopForce * wallHopDirection.x * -facingDirection, wallHopForce * wallHopDirection.y);
             rb.AddForce(forceToAdd, ForceMode2D.Impulse);
             isJumping = true;
+            FindObjectOfType<OyxgenManager>().wallHopDeplete();
         }
         else if ((isWallSliding || isTouchingWall) && movementInputDirection != 0 && canJump) // Wall jump
         {
@@ -158,6 +161,7 @@ public class PlayerMovement : MonoBehaviour
             Vector2 forceToAdd = new Vector2(wallJumpForce * wallJumpDirection.x * movementInputDirection, wallJumpForce * wallJumpDirection.y);
             rb.AddForce(forceToAdd, ForceMode2D.Impulse);
             isJumping = true;
+            FindObjectOfType<OyxgenManager>().jumpDeplete();
         }
     }
 
@@ -170,12 +174,14 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector2(movementSpeed * movementInputDirection, rb.velocity.y);
             coyoteCount = coyoteTime;
             isJumping = false;
+            FindObjectOfType<OyxgenManager>().moveDeplete();
         }
-
+        //For Coyote Time Movement
         if (!isGrounded && !isJumping && !isWallSliding) {
             coyoteCount -= Time.deltaTime;
+            FindObjectOfType<OyxgenManager>().moveDeplete();
         }
-
+        //Air Force movement
         else if (!isGrounded && !isWallSliding && movementInputDirection != 0)
         {
             Vector2 forceToAdd = new Vector2(movementForceInAir * movementInputDirection, 0);
