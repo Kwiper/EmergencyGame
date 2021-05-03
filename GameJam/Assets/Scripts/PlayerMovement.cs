@@ -64,6 +64,7 @@ public class PlayerMovement : MonoBehaviour
             CheckMovementDirection();
             CheckIfCanJump();
             CheckIfWallSliding();
+            Animate();
         }
     }
 
@@ -118,13 +119,9 @@ public class PlayerMovement : MonoBehaviour
         if (rb.velocity.x != 0)
         {
             isWalking = true;
-            player_anim.SetBool("isMoving", true);
             
-        }
-        else
-        {
-            isWalking = false;
-            player_anim.SetBool("isMoving", false);
+           
+            
         }
     }
 
@@ -238,4 +235,15 @@ public class PlayerMovement : MonoBehaviour
         this.isAlive = isAlive;
         Debug.Log("Player is dead");
     }
+
+    private void Animate() {
+	    if(movementInputDirection != 0)
+	    {
+		    player_anim.SetBool("isMoving", true);
+	    }
+	    else {
+		    player_anim.SetBool("isMoving", false); 
+	    }
+    }
+    
 }

@@ -11,9 +11,12 @@
           <e p="EnemyBullet.cs" t="Include" />
           <e p="KillzoneManager.cs" t="Include" />
           <e p="MovingPlatform.cs" t="Include" />
+          <e p="OffBlock.cs" t="Include" />
+          <e p="OnBlock.cs" t="Include" />
           <e p="OxygenCheckPoint.cs" t="Include" />
           <e p="OyxgenManager.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
+          <e p="Switch.cs" t="Include" />
           <e p="TestCamera.cs" t="Include" />
         </e>
       </e>
