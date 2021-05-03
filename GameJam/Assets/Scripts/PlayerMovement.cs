@@ -153,7 +153,6 @@ public class PlayerMovement : MonoBehaviour
             isJumping = true;
             FindObjectOfType<OyxgenManager>().jumpDeplete();
             FindObjectOfType<TestCamera>().setJump();
-            coyoteCount = 0;
         }
         else if (isWallSliding && movementInputDirection == 0 && canJump) //Wall hop
         {
@@ -189,12 +188,7 @@ public class PlayerMovement : MonoBehaviour
             coyoteCount -= Time.deltaTime;
             FindObjectOfType<OyxgenManager>().moveDeplete();
         }
-
-        if (!isGrounded && !isWallSliding && movementInputDirection != 0) {
-            rb.velocity = new Vector2(movementSpeed * movementInputDirection, rb.velocity.y);
-        }
         //Air Force movement
-        /*
         else if (!isGrounded && !isWallSliding && movementInputDirection != 0)
         {
             Vector2 forceToAdd = new Vector2(movementForceInAir * movementInputDirection, 0);
@@ -209,7 +203,6 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x * airDragMultiplier, rb.velocity.y);
         }
-        */
 
         if (isWallSliding)
         {
