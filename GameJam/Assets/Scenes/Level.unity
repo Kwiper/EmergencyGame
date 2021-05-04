@@ -2200,7 +2200,7 @@ PrefabInstance:
     - target: {fileID: 6476770226528452516, guid: 0782a8c964421e44d93842d889c06d27,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 2
+      value: 3.3333333
       objectReference: {fileID: 0}
     - target: {fileID: 6476770226528452517, guid: 0782a8c964421e44d93842d889c06d27,
         type: 3}
@@ -2225,7 +2225,7 @@ PrefabInstance:
     - target: {fileID: 6476770226528452521, guid: 0782a8c964421e44d93842d889c06d27,
         type: 3}
       propertyPath: wallCheckDistance
-      value: 1
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 6476770226528452522, guid: 0782a8c964421e44d93842d889c06d27,
         type: 3}
