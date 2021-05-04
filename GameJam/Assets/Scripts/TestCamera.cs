@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TestCamera : MonoBehaviour
-{
-
+{ 
     public GameObject player;
 
     //Amount that camera is normally offset by
@@ -23,6 +22,7 @@ public class TestCamera : MonoBehaviour
     //Vertical direction the player is moving
     private float vDir;
 
+ 
     //Boolean for jump
     private bool jump;
     // Start is called before the first frame update

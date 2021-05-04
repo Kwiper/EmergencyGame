@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class OyxgenManager : MonoBehaviour {
 	public float oxygen = 1000;
+
+	public float oxygenCheckPointMin = 500;
 	
 	// stores the last value of oxygen at a checkpoint
 	public float oxygenLastCheck;
@@ -59,8 +61,10 @@ public class OyxgenManager : MonoBehaviour {
     }
 
     public void oxygenRegenCheckpoint() {
-	    oxygen += oxygenRegenCheckpointTime;
+	    if(oxygen > oxygenCheckPointMin)oxygen += oxygenRegenCheckpointTime;
+		else oxygen = oxygenCheckPointMin;
     }
+
 
 	public void oxygenSaveCheckPoint() {
 	    oxygenLastCheck = oxygen;
