@@ -4546,11 +4546,6 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 6476770226528452521, guid: 0782a8c964421e44d93842d889c06d27,
-        type: 3}
-      propertyPath: wallCheckDistance
-      value: 0.9
-      objectReference: {fileID: 0}
     - target: {fileID: 6476770226528452522, guid: 0782a8c964421e44d93842d889c06d27,
         type: 3}
       propertyPath: m_RootOrder
@@ -5255,7 +5250,6 @@ MonoBehaviour:
   oxygenRegenPickupTime: 25
   oxygenRegenCheckpointTime: 50
   oxygenCountdownToggle: 0
-<<<<<<< Updated upstream
   oxygenBar: {fileID: 901605257}
 --- !u!1 &901605255
 GameObject:
@@ -5362,9 +5356,6 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
-=======
-  oxygenBar: {fileID: 0}
->>>>>>> Stashed changes
 --- !u!1 &905252596
 GameObject:
   m_ObjectHideFlags: 0
