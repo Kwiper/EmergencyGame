@@ -237,14 +237,13 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void Animate() {
-	    if(movementInputDirection != 0 && !isWallSliding)
+	    if(movementInputDirection != 0)
 	    {
 		    player_anim.SetBool("isMoving", true);
 	    }
 	    else {
 		    player_anim.SetBool("isMoving", false); 
 	    }
-
     }
     
 }
