@@ -170,8 +170,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 100
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 0
   velocity: {x: 5, y: 0, z: 0}
-  incrementAmount: 1
+  speed: 5
+  pointA: {fileID: 0}
+  pointB: {fileID: 0}
+  detectRadius: 0
 --- !u!61 &47068613
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3262,6 +3268,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3583ea9fd4f179489e8c6797ee6d83a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!60 &566312405 stripped
+PolygonCollider2D:
+  m_CorrespondingSourceObject: {fileID: 290534312813077923, guid: 2a5cc584923302e47a2828cd02bbce70,
+    type: 3}
+  m_PrefabInstance: {fileID: 1573896606}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &578832329
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3494,6 +3506,85 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &623258036
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2188762851187787628, guid: 2a481881e4be2aa43937f21d10be4435,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2188762851187787628, guid: 2a481881e4be2aa43937f21d10be4435,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2188762851187787628, guid: 2a481881e4be2aa43937f21d10be4435,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2188762851187787628, guid: 2a481881e4be2aa43937f21d10be4435,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2188762851187787628, guid: 2a481881e4be2aa43937f21d10be4435,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2188762851187787628, guid: 2a481881e4be2aa43937f21d10be4435,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2188762851187787628, guid: 2a481881e4be2aa43937f21d10be4435,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2188762851187787628, guid: 2a481881e4be2aa43937f21d10be4435,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2188762851187787628, guid: 2a481881e4be2aa43937f21d10be4435,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2188762851187787628, guid: 2a481881e4be2aa43937f21d10be4435,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2188762851187787628, guid: 2a481881e4be2aa43937f21d10be4435,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2188762851187787629, guid: 2a481881e4be2aa43937f21d10be4435,
+        type: 3}
+      propertyPath: m_Follow
+      value: 
+      objectReference: {fileID: 978836108}
+    - target: {fileID: 2188762851187787630, guid: 2a481881e4be2aa43937f21d10be4435,
+        type: 3}
+      propertyPath: m_BoundingShape2D
+      value: 
+      objectReference: {fileID: 566312405}
+    - target: {fileID: 2188762851187787631, guid: 2a481881e4be2aa43937f21d10be4435,
+        type: 3}
+      propertyPath: m_Name
+      value: CM vcam1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2a481881e4be2aa43937f21d10be4435, type: 3}
 --- !u!1 &650407640
 GameObject:
   m_ObjectHideFlags: 0
@@ -5150,6 +5241,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   oxygen: 10000
+  oxygenCheckPointMin: 500
   oxygenLastCheck: 0
   passiveSubtractTime: 1
   jumpSubtractTime: 2
@@ -5548,8 +5640,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 200
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 0
   velocity: {x: 1, y: 1, z: 0}
-  incrementAmount: 1
+  speed: 5
+  pointA: {fileID: 0}
+  pointB: {fileID: 0}
+  detectRadius: 0
 --- !u!61 &966166743
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5710,8 +5808,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 80
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 0
   velocity: {x: 5, y: 2, z: 0}
-  incrementAmount: 1
+  speed: 5
+  pointA: {fileID: 0}
+  pointB: {fileID: 0}
+  detectRadius: 0
 --- !u!61 &973073280
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5814,6 +5918,12 @@ SpriteRenderer:
 --- !u!1 &978836103 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6476770226528452518, guid: 0782a8c964421e44d93842d889c06d27,
+    type: 3}
+  m_PrefabInstance: {fileID: 687302872}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &978836108 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6476770226528452522, guid: 0782a8c964421e44d93842d889c06d27,
     type: 3}
   m_PrefabInstance: {fileID: 687302872}
   m_PrefabAsset: {fileID: 0}
@@ -26337,6 +26447,7 @@ GameObject:
   - component: {fileID: 1527734494}
   - component: {fileID: 1527734493}
   - component: {fileID: 1527734496}
+  - component: {fileID: 1527734497}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -26403,7 +26514,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1527734492}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.5, y: 0, z: -19.02}
+  m_LocalPosition: {x: 5.3972383, y: 3.1020992, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -26426,6 +26537,40 @@ MonoBehaviour:
   retractAmount: 0.2
   offsetH: 0.5
   offsetV: 1
+--- !u!114 &1527734497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1527734492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowDebugText: 0
+  m_ShowCameraFrustum: 1
+  m_IgnoreTimeScale: 0
+  m_WorldUpOverride: {fileID: 0}
+  m_UpdateMethod: 2
+  m_BlendUpdateMethod: 1
+  m_DefaultBlend:
+    m_Style: 1
+    m_Time: 2
+    m_CustomCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  m_CustomBlends: {fileID: 0}
+  m_CameraCutEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_CameraActivatedEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1527974924
 GameObject:
   m_ObjectHideFlags: 0
@@ -26473,8 +26618,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 100
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 0
   velocity: {x: 5, y: -2, z: 0}
-  incrementAmount: 1
+  speed: 5
+  pointA: {fileID: 0}
+  pointB: {fileID: 0}
+  detectRadius: 0
 --- !u!61 &1527974927
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26713,6 +26864,75 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1573896606
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 290534312813077916, guid: 2a5cc584923302e47a2828cd02bbce70,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 290534312813077916, guid: 2a5cc584923302e47a2828cd02bbce70,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 20.753479
+      objectReference: {fileID: 0}
+    - target: {fileID: 290534312813077916, guid: 2a5cc584923302e47a2828cd02bbce70,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.955516
+      objectReference: {fileID: 0}
+    - target: {fileID: 290534312813077916, guid: 2a5cc584923302e47a2828cd02bbce70,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10.051003
+      objectReference: {fileID: 0}
+    - target: {fileID: 290534312813077916, guid: 2a5cc584923302e47a2828cd02bbce70,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 290534312813077916, guid: 2a5cc584923302e47a2828cd02bbce70,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 290534312813077916, guid: 2a5cc584923302e47a2828cd02bbce70,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 290534312813077916, guid: 2a5cc584923302e47a2828cd02bbce70,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 290534312813077916, guid: 2a5cc584923302e47a2828cd02bbce70,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 290534312813077916, guid: 2a5cc584923302e47a2828cd02bbce70,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 290534312813077916, guid: 2a5cc584923302e47a2828cd02bbce70,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 290534312813077922, guid: 2a5cc584923302e47a2828cd02bbce70,
+        type: 3}
+      propertyPath: m_Name
+      value: World Boundary
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2a5cc584923302e47a2828cd02bbce70, type: 3}
 --- !u!1001 &1592931682
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28122,8 +28342,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 100
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 0
   velocity: {x: 5, y: -2, z: 0}
-  incrementAmount: 1
+  speed: 5
+  pointA: {fileID: 0}
+  pointB: {fileID: 0}
+  detectRadius: 0
 --- !u!61 &1834006887
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29250,8 +29476,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 100
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 0
   velocity: {x: 5, y: 2, z: 0}
-  incrementAmount: 1
+  speed: 5
+  pointA: {fileID: 0}
+  pointB: {fileID: 0}
+  detectRadius: 0
 --- !u!61 &2128273785
 BoxCollider2D:
   m_ObjectHideFlags: 0
