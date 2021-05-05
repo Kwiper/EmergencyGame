@@ -244,6 +244,30 @@ public class PlayerMovement : MonoBehaviour
 	    else {
 		    player_anim.SetBool("isMoving", false); 
 	    }
+
+        if (isWallSliding && !isGrounded)
+        {
+            player_anim.SetBool("isWallSliding", true);
+        }
+        else {
+            player_anim.SetBool("isWallSliding", false);
+        }
+
+        if (movementInputDirection == 0 && isGrounded && Input.GetAxisRaw("Vertical") < 0)
+        {
+            player_anim.SetBool("isCrouching", true);
+        }
+        else {
+            player_anim.SetBool("isCrouching", false);
+        }
+
+        if (!isGrounded && rb.velocity.y != 0 && !isWallSliding)
+        {
+            player_anim.SetBool("isJumping", true);
+        }
+        else {
+            player_anim.SetBool("isJumping", false);
+        }
     }
     
 }
