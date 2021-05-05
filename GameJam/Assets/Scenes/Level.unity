@@ -6550,7 +6550,7 @@ MonoBehaviour:
   oxygenRegenPickupTime: 25
   oxygenRegenCheckpointTime: 50
   oxygenCountdownToggle: 0
-  oxygenBar: {fileID: 0}
+  oxygenBar: {fileID: 629241066}
 --- !u!1 &887730652 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4218378477489260900, guid: 0688a55517335394183609d309d5b351,
