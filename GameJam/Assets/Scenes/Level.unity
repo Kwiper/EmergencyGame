@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 978836103}
-  offsetNorm: 5
+  offsetNorm: 3
   retractAmount: 0.2
   offsetH: 0.5
   offsetV: 1
