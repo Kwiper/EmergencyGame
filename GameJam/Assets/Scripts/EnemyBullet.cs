@@ -26,7 +26,8 @@ public class EnemyBullet : MonoBehaviour {
     private void OnCollisionEnter2D(Collision2D other) {
 	    if (other.gameObject.CompareTag("Player")) {
 		    Debug.Log("WHAT");
-		    // FindObjectOfType<OxygenManager>().oxygenHit();
+		    
+		    FindObjectOfType<OyxgenManager>().hitDelete();
 		    Destroy(gameObject);
 	    }
 	    else if (!other.gameObject.CompareTag("Player")) {

@@ -22,11 +22,16 @@ public class OyxgenManager : MonoBehaviour {
 	// modify this to change the amount of oxygen you lose during movement
 	public float moveSubtractTime = 1.5f;
 	
+	// modify this to change the amount of oxygen you lose by getting hit
+	public float hitByEnemySubtractTime = 100;
+	
 	// modify this to change the amount of oxygen you regain per pickup
 	public float oxygenRegenPickupTime = 25;
 	
 	// modify this to change the amount of oxygen you regain per checkpoint
 	public float oxygenRegenCheckpointTime = 50;
+	
+	
 
 	public bool oxygenCountdownToggle = false;
 
@@ -69,4 +74,10 @@ public class OyxgenManager : MonoBehaviour {
 	public void oxygenSaveCheckPoint() {
 	    oxygenLastCheck = oxygen;
     }
+
+	public void hitDelete() {
+		if (oxygenCountdownToggle) {
+			oxygen -= hitByEnemySubtractTime;
+		}
+	}
 }
