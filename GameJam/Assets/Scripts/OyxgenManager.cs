@@ -66,6 +66,7 @@ public class OyxgenManager : MonoBehaviour {
     }
 
     public void oxygenRegenCheckpoint() {
+		
 	    if(oxygen > oxygenCheckPointMin)oxygen += oxygenRegenCheckpointTime;
 		else oxygen = oxygenCheckPointMin;
     }

@@ -14,11 +14,14 @@ public class OxygenCheckPoint : MonoBehaviour
     }
 
     // Update is called once per frame
-    void OnTriggerEnter2D(){
-        if(activated == false){
-        FindObjectOfType<OyxgenManager>().oxygenRegenCheckpoint();
-        FindObjectOfType<OyxgenManager>().oxygenSaveCheckPoint();
-        activated = true;
+    void OnTriggerEnter2D(Collider2D other){
+
+        if (other.CompareTag("Player")){
+            if(activated == false){
+            FindObjectOfType<OyxgenManager>().oxygenRegenCheckpoint();
+            FindObjectOfType<OyxgenManager>().oxygenSaveCheckPoint();
+            activated = true;
+            }
         }
     }
 
