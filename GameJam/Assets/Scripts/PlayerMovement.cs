@@ -256,6 +256,7 @@ public class PlayerMovement : MonoBehaviour
         if (movementInputDirection == 0 && isGrounded && Input.GetAxisRaw("Vertical") < 0)
         {
             player_anim.SetBool("isCrouching", true);
+            FindObjectOfType<TestCamera>().setDown();
         }
         else
         {

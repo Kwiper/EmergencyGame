@@ -95,7 +95,7 @@ AnimatorStateTransition:
   m_IsExit: 0
   serializedVersion: 3
   m_TransitionDuration: 0
-  m_TransitionOffset: 0
+  m_TransitionOffset: 0.02435887
   m_ExitTime: 0.6567387
   m_HasExitTime: 0
   m_HasFixedDuration: 1
@@ -148,7 +148,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 0}
+  m_Motion: {fileID: 7400000, guid: c53a14c92a808e1488bbd719b5f45a9b, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -258,31 +258,31 @@ AnimatorStateMachine:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Base Layer
+  m_Name: WallJump
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -1528924267518255042}
     m_Position: {x: 360, y: -30, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -9012094148115021008}
-    m_Position: {x: 445, y: 155, z: 0}
+    m_Position: {x: 450, y: 160, z: 0}
   - serializedVersion: 1
-    m_State: {fileID: 8407243625378560498}
-    m_Position: {x: 160, y: 160, z: 0}
+    m_State: {fileID: -733756196921039746}
+    m_Position: {x: 170, y: -140, z: 0}
   - serializedVersion: 1
-    m_State: {fileID: 4993336240215195321}
-    m_Position: {x: 90, y: -100, z: 0}
+    m_State: {fileID: -480504820153878349}
+    m_Position: {x: 120, y: 180, z: 0}
   - serializedVersion: 1
-    m_State: {fileID: 8705650416917384563}
-    m_Position: {x: 620, y: -30, z: 0}
+    m_State: {fileID: -5939183319902286134}
+    m_Position: {x: 670, y: -30, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
-  - {fileID: 6675589246184309973}
-  - {fileID: 2622863117840810736}
+  - {fileID: 3674572144299960348}
+  - {fileID: -5262307211253120925}
   m_EntryTransitions: []
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
-  m_AnyStatePosition: {x: 50, y: 20, z: 0}
+  m_AnyStatePosition: {x: 0, y: -10, z: 0}
   m_EntryPosition: {x: 380, y: -250, z: 0}
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
@@ -299,7 +299,7 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -7100055399491863222}
-  - {fileID: 7104163213773836321}
+  - {fileID: 7986612189728368684}
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -388,7 +388,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 0}
+  m_Motion: {fileID: 7400000, guid: 481b511f9966f7f4386767ac4c1a3a31, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -433,25 +433,25 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: isWallSliding
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: isCrouching
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: isJumping
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
