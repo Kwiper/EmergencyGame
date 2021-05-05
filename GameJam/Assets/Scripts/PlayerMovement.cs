@@ -68,6 +68,9 @@ public class PlayerMovement : MonoBehaviour
             CheckIfCanJump();
             CheckIfWallSliding();
             Animate();
+            Debug.Log(facingDirection);
+            Debug.Log(movementInputDirection);
+
         }
         
     }
@@ -166,11 +169,15 @@ public class PlayerMovement : MonoBehaviour
         }
         else if ((isWallSliding || isTouchingWall) && movementInputDirection != 0 && canJump) // Wall jump
         {
-            isWallSliding = false;
-            Vector2 forceToAdd = new Vector2(wallJumpForce * wallJumpDirection.x * movementInputDirection, wallJumpForce * wallJumpDirection.y);
-            rb.AddForce(forceToAdd, ForceMode2D.Impulse);
-            isJumping = true;
-            FindObjectOfType<OyxgenManager>().jumpDeplete();
+
+            if ((facingDirection > 0 && movementInputDirection < 0) || (facingDirection < 0 && movementInputDirection > 0))
+            {
+                isWallSliding = false;
+                Vector2 forceToAdd = new Vector2(wallJumpForce * wallJumpDirection.x * movementInputDirection, wallJumpForce * wallJumpDirection.y);
+                rb.AddForce(forceToAdd, ForceMode2D.Impulse);
+                isJumping = true;
+                FindObjectOfType<OyxgenManager>().jumpDeplete();
+            }
         }
     }
 
