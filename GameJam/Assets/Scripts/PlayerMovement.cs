@@ -221,6 +221,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (isWallSliding)
         {
+            coyoteCount = 0;
             if (rb.velocity.y < -wallSlideSpeed)
             {
                 rb.velocity = new Vector2(rb.velocity.x, -wallSlideSpeed);
