@@ -8,6 +8,9 @@ public class Switch : MonoBehaviour
     private bool inRange = false;
     public bool state = false;
     private bool toggled = false;
+    
+	private float intervalTimeInMilliseconds = 500f;
+    private float toggleTime;
     //public GameObject objectToChange;
     // Start is called before the first frame update
     void Start()
@@ -16,8 +19,12 @@ public class Switch : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other){
-        if(other == player.GetComponent<Collider2D>()){
-            inRange = true;
+        if(other == player.GetComponent<Collider2D>()) {
+	        if (Time.time > toggleTime) {
+		        inRange = true;
+		        toggleTime = Time.time + intervalTimeInMilliseconds / 1000;
+	        }
+            
         }
     }
 
@@ -29,8 +36,8 @@ public class Switch : MonoBehaviour
     }
     void Update(){
         //bool enterIsPressed = Input.GetButtonDown("Submit");
-        if(inRange == true && toggled == false){
-            if(state == true){
+        if(inRange && toggled == false){
+            if(state){
                 //objectToChange.GetComponent<SpriteRenderer>().enabled=false;
                 state = false;
             }
