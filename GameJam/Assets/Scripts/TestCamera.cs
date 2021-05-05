@@ -45,7 +45,7 @@ public class TestCamera : MonoBehaviour
         //Checks input from player
         if(Input.GetAxis("Horizontal") != 0)hDir = Input.GetAxis("Horizontal");
         //Checks jump input from player
-        if(jump == true){
+        if(jump == true || Input.GetAxis("Vertical") > 0){
         vDir = -1;
         jump = false;
         } 
@@ -81,7 +81,7 @@ public class TestCamera : MonoBehaviour
             if(Mathf.Abs(vDir) < Mathf.Abs(retractAmount))vDir = 0;
             else vDir += retractAmount;           
         }
-        transform.position = new Vector3(player.transform.position.x+offsetH, player.transform.position.y+offsetV, -4f);
+        transform.position = new Vector3(player.transform.position.x+offsetH, player.transform.position.y-offsetV, -4f);
     }
 
 
