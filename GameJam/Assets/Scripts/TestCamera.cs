@@ -22,13 +22,17 @@ public class TestCamera : MonoBehaviour
     //Vertical direction the player is moving
     private float vDir;
 
- 
+    //Boolean for looking down
+    private bool down;
     //Boolean for jump
     private bool jump;
     // Start is called before the first frame update
     void Start()
     {
         
+    }
+    public void setDown(){
+        down = true;
     }
 
     public void setJump(){
@@ -44,6 +48,10 @@ public class TestCamera : MonoBehaviour
         if(jump == true){
         vDir = -1;
         jump = false;
+        } 
+        if(down == true){
+        vDir = 1;
+        down = false;
         } 
         //Resets offSet variables so that they don't increase exponentially
         offsetV = 1f;
