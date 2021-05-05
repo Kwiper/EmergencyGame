@@ -19,8 +19,12 @@ public class OxygenCheckPoint : MonoBehaviour
         if (other.CompareTag("Player")){
             if(activated == false){
             FindObjectOfType<OyxgenManager>().oxygenRegenCheckpoint();
-            FindObjectOfType<OyxgenManager>().oxygenSaveCheckPoint();
+//            FindObjectOfType<OyxgenManager>().oxygenSaveCheckPoint();
             activated = true;
+            GameObject player = GameObject.Find("Player");
+            player.GetComponent<PlayerMovement>().SetLastPlayerPos(transform.position);
+            
+
             }
         }
     }

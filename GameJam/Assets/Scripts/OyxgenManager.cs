@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -30,8 +31,8 @@ public class OyxgenManager : MonoBehaviour {
 	
 	// modify this to change the amount of oxygen you regain per checkpoint
 	public float oxygenRegenCheckpointTime = 50;
-	
-	
+
+	private GameObject[] MovingPlatformArr;
 
 	public bool oxygenCountdownToggle = false;
 
@@ -40,12 +41,23 @@ public class OyxgenManager : MonoBehaviour {
 	void Start()
     {
         oxygenBar.SetMaxOxygen(oxygen);
+        oxygenLastCheck = oxygen;
     }
     
     void Update() {
 	    oxygenBar.SetOxygen(oxygen);
 	    if(oxygenCountdownToggle) oxygen -= Time.deltaTime * passiveSubtractTime;
-		if(oxygen <= 0)FindObjectOfType<PlayerMovement>().setIsAlive(false);
+	    if (oxygen <= 0) {
+		    FindObjectOfType<PlayerMovement>().ResetPlayerToLastCheckpoint();
+		    oxygen = oxygenLastCheck;
+		    MovingPlatformArr = GameObject.FindGameObjectsWithTag("MovingPlatform");
+		    foreach (GameObject movingPlatform in MovingPlatformArr) {
+			    movingPlatform.GetComponent<MovingPlatform>().ResetBackToStart();
+		    }
+		    
+
+
+	    }
     }
 
     public void jumpDeplete() {
@@ -66,15 +78,23 @@ public class OyxgenManager : MonoBehaviour {
     }
 
     public void oxygenRegenCheckpoint() {
-		
-	    if(oxygen > oxygenCheckPointMin)oxygen += oxygenRegenCheckpointTime;
-		else oxygen = oxygenCheckPointMin;
-    }
 
-
-	public void oxygenSaveCheckPoint() {
+	    if (oxygen > oxygenCheckPointMin) {
+		    oxygen += oxygenRegenCheckpointTime;
+	    }
+	    else {
+		    oxygen = oxygenCheckPointMin;
+	    }
+	    // Every time you land on a checkpoint, save that oxygen level. 
 	    oxygenLastCheck = oxygen;
+		
+	    
     }
+
+
+//	public void oxygenSaveCheckPoint() {
+//	    
+//    }
 
 	public void hitDelete() {
 		StartCoroutine(PlayerHit());

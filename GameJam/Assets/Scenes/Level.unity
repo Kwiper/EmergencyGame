@@ -268,7 +268,7 @@ GameObject:
   - component: {fileID: 47068612}
   m_Layer: 8
   m_Name: Moving Platform (2)
-  m_TagString: Untagged
+  m_TagString: MovingPlatform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -308,6 +308,7 @@ MonoBehaviour:
   pointA: {fileID: 2130997519}
   pointB: {fileID: 200002365}
   detectRadius: 0
+  resetYes: 0
 --- !u!61 &47068613
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4460,7 +4461,7 @@ GameObject:
   - component: {fileID: 440383748}
   m_Layer: 8
   m_Name: Moving Platform (10)
-  m_TagString: Untagged
+  m_TagString: MovingPlatform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4486,6 +4487,7 @@ MonoBehaviour:
   pointA: {fileID: 1310315272}
   pointB: {fileID: 843950726}
   detectRadius: 0
+  resetYes: 0
 --- !u!61 &440383749
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5461,12 +5463,12 @@ PrefabInstance:
     - target: {fileID: 2188762851187787628, guid: 2a481881e4be2aa43937f21d10be4435,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.01
+      value: -4.6
       objectReference: {fileID: 0}
     - target: {fileID: 2188762851187787628, guid: 2a481881e4be2aa43937f21d10be4435,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.45
+      value: -3.4
       objectReference: {fileID: 0}
     - target: {fileID: 2188762851187787628, guid: 2a481881e4be2aa43937f21d10be4435,
         type: 3}
@@ -7213,12 +7215,12 @@ PrefabInstance:
     - target: {fileID: 6476770226528452522, guid: 0782a8c964421e44d93842d889c06d27,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.01
+      value: -4.6
       objectReference: {fileID: 0}
     - target: {fileID: 6476770226528452522, guid: 0782a8c964421e44d93842d889c06d27,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.45
+      value: -3.4
       objectReference: {fileID: 0}
     - target: {fileID: 6476770226528452522, guid: 0782a8c964421e44d93842d889c06d27,
         type: 3}
@@ -8147,7 +8149,7 @@ MonoBehaviour:
   jumpSubtractTime: 2
   wallHopSubtractTime: 1.3
   moveSubtractTime: 1.5
-  hitByEnemySubtractTime: 500
+  hitByEnemySubtractTime: 1000
   oxygenRegenPickupTime: 25
   oxygenRegenCheckpointTime: 50
   oxygenCountdownToggle: 1
@@ -8836,7 +8838,7 @@ GameObject:
   - component: {fileID: 973073279}
   m_Layer: 8
   m_Name: Moving Platform (5)
-  m_TagString: Untagged
+  m_TagString: MovingPlatform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8876,6 +8878,7 @@ MonoBehaviour:
   pointA: {fileID: 823415780}
   pointB: {fileID: 1196875821}
   detectRadius: 0
+  resetYes: 0
 --- !u!61 &973073280
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13418,7 +13421,7 @@ GameObject:
   - component: {fileID: 1266200123}
   m_Layer: 8
   m_Name: Moving Platform (8)
-  m_TagString: Untagged
+  m_TagString: MovingPlatform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13444,6 +13447,7 @@ MonoBehaviour:
   pointA: {fileID: 1033039104}
   pointB: {fileID: 1164872809}
   detectRadius: 0
+  resetYes: 0
 --- !u!61 &1266200124
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -39373,7 +39377,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1527734492}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.4968243, y: 2.8552606, z: -10}
+  m_LocalPosition: {x: 5.4968247, y: 2.8552608, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -39445,7 +39449,7 @@ GameObject:
   - component: {fileID: 1527974926}
   m_Layer: 8
   m_Name: Moving Platform (7)
-  m_TagString: Untagged
+  m_TagString: MovingPlatform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39485,6 +39489,7 @@ MonoBehaviour:
   pointA: {fileID: 1654466849}
   pointB: {fileID: 887730652}
   detectRadius: 0
+  resetYes: 0
 --- !u!61 &1527974927
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -41079,7 +41084,7 @@ GameObject:
   - component: {fileID: 1686593547}
   m_Layer: 8
   m_Name: Moving Platform (9)
-  m_TagString: Untagged
+  m_TagString: MovingPlatform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41105,6 +41110,7 @@ MonoBehaviour:
   pointA: {fileID: 481440604}
   pointB: {fileID: 15381401}
   detectRadius: 0
+  resetYes: 0
 --- !u!61 &1686593548
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -41453,7 +41459,7 @@ GameObject:
   - component: {fileID: 1716792489}
   m_Layer: 8
   m_Name: Moving Platform (11)
-  m_TagString: Untagged
+  m_TagString: MovingPlatform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41479,6 +41485,7 @@ MonoBehaviour:
   pointA: {fileID: 2026841443}
   pointB: {fileID: 1911565345}
   detectRadius: 0
+  resetYes: 0
 --- !u!61 &1716792490
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -42462,7 +42469,7 @@ GameObject:
   - component: {fileID: 1834006886}
   m_Layer: 8
   m_Name: Moving Platform (1)
-  m_TagString: Untagged
+  m_TagString: MovingPlatform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42502,6 +42509,7 @@ MonoBehaviour:
   pointA: {fileID: 147985771}
   pointB: {fileID: 1508446381}
   detectRadius: 0
+  resetYes: 0
 --- !u!61 &1834006887
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -43937,7 +43945,7 @@ GameObject:
   - component: {fileID: 2128273784}
   m_Layer: 8
   m_Name: Moving Platform (3)
-  m_TagString: Untagged
+  m_TagString: MovingPlatform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43977,6 +43985,7 @@ MonoBehaviour:
   pointA: {fileID: 930932327}
   pointB: {fileID: 2035907665}
   detectRadius: 0
+  resetYes: 0
 --- !u!61 &2128273785
 BoxCollider2D:
   m_ObjectHideFlags: 0

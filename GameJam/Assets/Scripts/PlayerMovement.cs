@@ -45,6 +45,9 @@ public class PlayerMovement : MonoBehaviour
 	
 	// This animator is for the player's animations
 	private Animator player_anim;
+
+	private Vector2 lastPlayerPos;
+	
     // Start is called before the first frame update
     void Start()
     {
@@ -52,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
         wallHopDirection.Normalize();
         wallJumpDirection.Normalize();
         player_anim = gameObject.GetComponent<Animator>();
-        
+        lastPlayerPos = transform.position;
     }
 
     // Update is called once per frame
@@ -66,6 +69,7 @@ public class PlayerMovement : MonoBehaviour
             CheckIfWallSliding();
             Animate();
         }
+        
     }
 
     private void FixedUpdate()
@@ -272,6 +276,14 @@ public class PlayerMovement : MonoBehaviour
             player_anim.SetBool("isJumping", false);
         }
 
+    }
+
+    public void SetLastPlayerPos(Vector2 position) {
+	    lastPlayerPos = position;
+    }
+
+    public void ResetPlayerToLastCheckpoint() {
+	    transform.position = lastPlayerPos;
     }
     
 }
