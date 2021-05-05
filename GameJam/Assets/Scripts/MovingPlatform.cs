@@ -40,7 +40,6 @@ public class MovingPlatform : MonoBehaviour
         tr = GetComponent<Transform>();
         bc = GetComponent<BoxCollider2D>();
         player = GameObject.Find("Player");
-       
     }
 
     private void OnCollisionEnter2D(Collision2D other){
