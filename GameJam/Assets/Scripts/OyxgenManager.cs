@@ -77,8 +77,18 @@ public class OyxgenManager : MonoBehaviour {
     }
 
 	public void hitDelete() {
+		StartCoroutine(PlayerHit());
 		if (oxygenCountdownToggle) {
 			oxygen -= hitByEnemySubtractTime;
+			
 		}
+	}
+	
+	IEnumerator PlayerHit() {
+		GameObject player = GameObject.Find("Player");
+		player.GetComponent<SpriteRenderer>().color = Color.red;
+		yield return new WaitForSeconds(0.05f);
+		player.GetComponent<SpriteRenderer>().color = Color.white;
+
 	}
 }

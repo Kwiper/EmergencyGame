@@ -3615,7 +3615,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 6476770226528452518, guid: 0782a8c964421e44d93842d889c06d27, type: 3}
-  bullet: {fileID: 2488155684898614775, guid: 3e59b493639e83c4a9167acf0065433c, type: 3}
+  bullet: {fileID: 5700836232693441320, guid: e45e8941d3d9d4744ab8dba4366d823c, type: 3}
   bulletSpeed: 1000
   fireRate: 2000
 --- !u!212 &176981932
@@ -4042,7 +4042,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 6476770226528452518, guid: 0782a8c964421e44d93842d889c06d27, type: 3}
-  bullet: {fileID: 2488155684898614775, guid: 3e59b493639e83c4a9167acf0065433c, type: 3}
+  bullet: {fileID: 5700836232693441320, guid: e45e8941d3d9d4744ab8dba4366d823c, type: 3}
   bulletSpeed: 1000
   fireRate: 2000
 --- !u!212 &305531156
@@ -4315,7 +4315,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 6476770226528452518, guid: 0782a8c964421e44d93842d889c06d27, type: 3}
-  bullet: {fileID: 2488155684898614775, guid: 3e59b493639e83c4a9167acf0065433c, type: 3}
+  bullet: {fileID: 5700836232693441320, guid: e45e8941d3d9d4744ab8dba4366d823c, type: 3}
   bulletSpeed: 1000
   fireRate: 2000
 --- !u!212 &402321578
@@ -4683,7 +4683,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 6476770226528452518, guid: 0782a8c964421e44d93842d889c06d27, type: 3}
-  bullet: {fileID: 2488155684898614775, guid: 3e59b493639e83c4a9167acf0065433c, type: 3}
+  bullet: {fileID: 5700836232693441320, guid: e45e8941d3d9d4744ab8dba4366d823c, type: 3}
   bulletSpeed: 1000
   fireRate: 2000
 --- !u!212 &445124102
@@ -4822,7 +4822,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 6476770226528452518, guid: 0782a8c964421e44d93842d889c06d27, type: 3}
-  bullet: {fileID: 2488155684898614775, guid: 3e59b493639e83c4a9167acf0065433c, type: 3}
+  bullet: {fileID: 5700836232693441320, guid: e45e8941d3d9d4744ab8dba4366d823c, type: 3}
   bulletSpeed: 1000
   fireRate: 2000
 --- !u!212 &450847175
@@ -7262,6 +7262,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6476770226528452523, guid: 0782a8c964421e44d93842d889c06d27,
         type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6476770226528452523, guid: 0782a8c964421e44d93842d889c06d27,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6476770226528452523, guid: 0782a8c964421e44d93842d889c06d27,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6476770226528452523, guid: 0782a8c964421e44d93842d889c06d27,
+        type: 3}
       propertyPath: m_SortingOrder
       value: -2
       objectReference: {fileID: 0}
@@ -7611,7 +7626,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 6476770226528452518, guid: 0782a8c964421e44d93842d889c06d27, type: 3}
-  bullet: {fileID: 2488155684898614775, guid: 3e59b493639e83c4a9167acf0065433c, type: 3}
+  bullet: {fileID: 5700836232693441320, guid: e45e8941d3d9d4744ab8dba4366d823c, type: 3}
   bulletSpeed: 1000
   fireRate: 2000
 --- !u!212 &730797112
@@ -8227,7 +8242,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 6476770226528452518, guid: 0782a8c964421e44d93842d889c06d27, type: 3}
-  bullet: {fileID: 2488155684898614775, guid: 3e59b493639e83c4a9167acf0065433c, type: 3}
+  bullet: {fileID: 5700836232693441320, guid: e45e8941d3d9d4744ab8dba4366d823c, type: 3}
   bulletSpeed: 1000
   fireRate: 2000
 --- !u!212 &891462721
@@ -8476,7 +8491,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 6476770226528452518, guid: 0782a8c964421e44d93842d889c06d27, type: 3}
-  bullet: {fileID: 2488155684898614775, guid: 3e59b493639e83c4a9167acf0065433c, type: 3}
+  bullet: {fileID: 5700836232693441320, guid: e45e8941d3d9d4744ab8dba4366d823c, type: 3}
   bulletSpeed: 1000
   fireRate: 2000
 --- !u!212 &913295388
@@ -9301,7 +9316,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 6476770226528452518, guid: 0782a8c964421e44d93842d889c06d27, type: 3}
-  bullet: {fileID: 2488155684898614775, guid: 3e59b493639e83c4a9167acf0065433c, type: 3}
+  bullet: {fileID: 5700836232693441320, guid: e45e8941d3d9d4744ab8dba4366d823c, type: 3}
   bulletSpeed: 1000
   fireRate: 2000
 --- !u!212 &1046905865
@@ -9440,7 +9455,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 6476770226528452518, guid: 0782a8c964421e44d93842d889c06d27, type: 3}
-  bullet: {fileID: 2488155684898614775, guid: 3e59b493639e83c4a9167acf0065433c, type: 3}
+  bullet: {fileID: 5700836232693441320, guid: e45e8941d3d9d4744ab8dba4366d823c, type: 3}
   bulletSpeed: 1000
   fireRate: 2000
 --- !u!212 &1049399621
@@ -9585,7 +9600,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 6476770226528452518, guid: 0782a8c964421e44d93842d889c06d27, type: 3}
-  bullet: {fileID: 2488155684898614775, guid: 3e59b493639e83c4a9167acf0065433c, type: 3}
+  bullet: {fileID: 5700836232693441320, guid: e45e8941d3d9d4744ab8dba4366d823c, type: 3}
   bulletSpeed: 1000
   fireRate: 2000
 --- !u!212 &1086368083
@@ -12660,7 +12675,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 6476770226528452518, guid: 0782a8c964421e44d93842d889c06d27, type: 3}
-  bullet: {fileID: 2488155684898614775, guid: 3e59b493639e83c4a9167acf0065433c, type: 3}
+  bullet: {fileID: 5700836232693441320, guid: e45e8941d3d9d4744ab8dba4366d823c, type: 3}
   bulletSpeed: 1000
   fireRate: 2000
 --- !u!212 &1148328583
@@ -12811,7 +12826,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 6476770226528452518, guid: 0782a8c964421e44d93842d889c06d27, type: 3}
-  bullet: {fileID: 2488155684898614775, guid: 3e59b493639e83c4a9167acf0065433c, type: 3}
+  bullet: {fileID: 5700836232693441320, guid: e45e8941d3d9d4744ab8dba4366d823c, type: 3}
   bulletSpeed: 1000
   fireRate: 2000
 --- !u!212 &1194602926
@@ -13072,7 +13087,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 6476770226528452518, guid: 0782a8c964421e44d93842d889c06d27, type: 3}
-  bullet: {fileID: 2488155684898614775, guid: 3e59b493639e83c4a9167acf0065433c, type: 3}
+  bullet: {fileID: 5700836232693441320, guid: e45e8941d3d9d4744ab8dba4366d823c, type: 3}
   bulletSpeed: 1000
   fireRate: 2000
 --- !u!212 &1208082617
@@ -13300,7 +13315,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 6476770226528452518, guid: 0782a8c964421e44d93842d889c06d27, type: 3}
-  bullet: {fileID: 2488155684898614775, guid: 3e59b493639e83c4a9167acf0065433c, type: 3}
+  bullet: {fileID: 5700836232693441320, guid: e45e8941d3d9d4744ab8dba4366d823c, type: 3}
   bulletSpeed: 1000
   fireRate: 2000
 --- !u!212 &1253591023
@@ -14097,7 +14112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 6476770226528452518, guid: 0782a8c964421e44d93842d889c06d27, type: 3}
-  bullet: {fileID: 2488155684898614775, guid: 3e59b493639e83c4a9167acf0065433c, type: 3}
+  bullet: {fileID: 5700836232693441320, guid: e45e8941d3d9d4744ab8dba4366d823c, type: 3}
   bulletSpeed: 1000
   fireRate: 2000
 --- !u!212 &1334349286
@@ -14859,7 +14874,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 6476770226528452518, guid: 0782a8c964421e44d93842d889c06d27, type: 3}
-  bullet: {fileID: 2488155684898614775, guid: 3e59b493639e83c4a9167acf0065433c, type: 3}
+  bullet: {fileID: 5700836232693441320, guid: e45e8941d3d9d4744ab8dba4366d823c, type: 3}
   bulletSpeed: 1000
   fireRate: 2000
 --- !u!212 &1410889335
@@ -15108,7 +15123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 6476770226528452518, guid: 0782a8c964421e44d93842d889c06d27, type: 3}
-  bullet: {fileID: 2488155684898614775, guid: 3e59b493639e83c4a9167acf0065433c, type: 3}
+  bullet: {fileID: 5700836232693441320, guid: e45e8941d3d9d4744ab8dba4366d823c, type: 3}
   bulletSpeed: 1000
   fireRate: 2000
 --- !u!212 &1429143891
@@ -15322,7 +15337,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 6476770226528452518, guid: 0782a8c964421e44d93842d889c06d27, type: 3}
-  bullet: {fileID: 2488155684898614775, guid: 3e59b493639e83c4a9167acf0065433c, type: 3}
+  bullet: {fileID: 5700836232693441320, guid: e45e8941d3d9d4744ab8dba4366d823c, type: 3}
   bulletSpeed: 1000
   fireRate: 2000
 --- !u!212 &1446846225
@@ -39358,7 +39373,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1527734492}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.4087417, y: 2.8496692, z: -10}
+  m_LocalPosition: {x: 5.4968243, y: 2.8552606, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -39653,7 +39668,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 6476770226528452518, guid: 0782a8c964421e44d93842d889c06d27, type: 3}
-  bullet: {fileID: 2488155684898614775, guid: 3e59b493639e83c4a9167acf0065433c, type: 3}
+  bullet: {fileID: 5700836232693441320, guid: e45e8941d3d9d4744ab8dba4366d823c, type: 3}
   bulletSpeed: 1000
   fireRate: 2000
 --- !u!212 &1530044984
@@ -39825,7 +39840,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 6476770226528452518, guid: 0782a8c964421e44d93842d889c06d27, type: 3}
-  bullet: {fileID: 2488155684898614775, guid: 3e59b493639e83c4a9167acf0065433c, type: 3}
+  bullet: {fileID: 5700836232693441320, guid: e45e8941d3d9d4744ab8dba4366d823c, type: 3}
   bulletSpeed: 1000
   fireRate: 2000
 --- !u!212 &1550394344
@@ -40560,7 +40575,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 6476770226528452518, guid: 0782a8c964421e44d93842d889c06d27, type: 3}
-  bullet: {fileID: 2488155684898614775, guid: 3e59b493639e83c4a9167acf0065433c, type: 3}
+  bullet: {fileID: 5700836232693441320, guid: e45e8941d3d9d4744ab8dba4366d823c, type: 3}
   bulletSpeed: 1000
   fireRate: 2000
 --- !u!50 &1621901663
@@ -42703,7 +42718,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 6476770226528452518, guid: 0782a8c964421e44d93842d889c06d27, type: 3}
-  bullet: {fileID: 2488155684898614775, guid: 3e59b493639e83c4a9167acf0065433c, type: 3}
+  bullet: {fileID: 5700836232693441320, guid: e45e8941d3d9d4744ab8dba4366d823c, type: 3}
   bulletSpeed: 1000
   fireRate: 2000
 --- !u!212 &1850147490
