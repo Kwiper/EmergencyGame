@@ -56,7 +56,7 @@ public class OyxgenManager : MonoBehaviour {
 		if(oxygenCountdownToggle) oxygen -= moveSubtractTime;
     }
 
-    public void oxygenRegenPickuo() {
+    public void oxygenRegenPickup() {
 	    oxygen += oxygenRegenPickupTime;
     }
 

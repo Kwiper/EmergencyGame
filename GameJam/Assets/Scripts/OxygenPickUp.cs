@@ -10,10 +10,13 @@ public class OxygenPickUp : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(){
-            FindObjectOfType<OyxgenManager>().oxygenRegenPickuo();
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            FindObjectOfType<OyxgenManager>().oxygenRegenPickup();
             Destroy(gameObject);
-            
+        }    
     }
 
 
