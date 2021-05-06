@@ -30,9 +30,12 @@ public class EnemyBullet : MonoBehaviour {
 		    Destroy(gameObject);
 
 	    }
-	    else if (!other.gameObject.CompareTag("Player")) {
+	    else if (!other.gameObject.CompareTag("Player") && !other.gameObject.CompareTag("Elevator Points") ) {
 		    Destroy(gameObject);
 	    }
+		string str = other.gameObject.tag;
+		bool isTrue = other.gameObject.CompareTag("Elevator Points");
+		Debug.Log(str);
 
     }
     

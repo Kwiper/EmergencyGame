@@ -7,6 +7,9 @@ TagManager:
   - killzone
   - MovingPlatform
   - Section
+  - Bullet
+  - Elevator Points
+  - Points
   layers:
   - Default
   - TransparentFX
