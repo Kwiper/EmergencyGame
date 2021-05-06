@@ -20,7 +20,7 @@ public class SectionScript : MonoBehaviour {
     void Update()
     {
 	    if (triggeredEnter) {
-		    if (audio.volume < 0.2f) {
+		    if (audio.volume < 0.35f) {
 			    audio.volume += 0.05f * Time.deltaTime;
 		    }
 	    }
