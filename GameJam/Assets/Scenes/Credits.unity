@@ -182,89 +182,88 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'By PSW Crew
 
-    
+
 
     Nathan Cerone
-
-    Herman Chan
-
-    Benedict
-    Wong
-
-    Alen Pontejos
-
-    Jonathan Newman
-
-    
-
-    Project Lead:
-
-    Nathan
-    Cerone
-
-    
-
-    Level Design:
-
-    Herman Chan
-
-    
-
-    Enemy Programming:
-
-    Benedict
-    Wong:
-
-    
-
-    Player Programming:
-
-    Jonathan Newman
-
-    
-
-    Environment
-    Programming:
-
-    Nathan Cerone
-
-    
-
-    Character Design, Sprites and Backgrounds:
-
-    Alen
-    Pontejos
-
-    
-
-    Gameplay Design:
 
     Herman Chan
 
     Benedict Wong
 
-    
-
-    Music
-    and SFX:
+    Alen
+    Pontejos
 
     Jonathan Newman
 
-    
+
+
+    Project Lead:
+
+    Nathan Cerone
+
+
+
+    Level
+    Design:
+
+    Herman Chan
+
+
+
+    Enemy Programming:
+
+    Benedict Wong:
+
+
+
+    Player
+    Programming:
+
+    Jonathan Newman
+
+
+
+    Environment Programming:
+
+    Nathan
+    Cerone
+
+
+
+    Character Design, Sprites and Backgrounds:
+
+    Alen Pontejos
+
+
+
+    Gameplay
+    Design:
+
+    Herman Chan
+
+    Benedict Wong
+
+
+
+    Music and SFX:
+
+    Jonathan
+    Newman
+
+
 
     Motivational Support:
 
     Our moms
 
-    Take-out
-    delivery food
+    Take-out delivery food
 
-    Herman''s Monster Energy
+    Herman''s
+    Monster Energy
 
-    The Desire to Have a Good
-    Portfolio
+    The Desire to Have a Good Portfolio
 
-    
+
 
     THANKS FOR PLAYING
 
@@ -706,7 +705,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -224}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1442886438
@@ -722,7 +721,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.1
-  time: 33000
+  time: 37750
 --- !u!1 &2026718817
 GameObject:
   m_ObjectHideFlags: 0
@@ -758,7 +757,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -0, y: -517}
+  m_AnchoredPosition: {x: -0, y: -257}
   m_SizeDelta: {x: 885.4758, y: 202.99152}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2026718819
