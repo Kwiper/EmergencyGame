@@ -20,13 +20,13 @@ public class SectionScript : MonoBehaviour {
     void Update()
     {
 	    if (triggeredEnter) {
-		    if (audio.volume < 1) {
-			    audio.volume += 0.3f * Time.deltaTime;
+		    if (audio.volume < 0.2f) {
+			    audio.volume += 0.05f * Time.deltaTime;
 		    }
 	    }
 	    if (triggeredExit) {
 		    if (audio.volume > 0) {
-			    audio.volume -= 0.6f * Time.deltaTime;
+			    audio.volume -= 0.05f * Time.deltaTime;
 		    }
 	    }
     }

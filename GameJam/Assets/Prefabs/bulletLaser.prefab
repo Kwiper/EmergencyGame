@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8658114572013290781}
   - component: {fileID: 415982082392014296}
   - component: {fileID: 4317828745373936784}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: bulletLaser
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -121,7 +121,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 6.25
+  m_Radius: 3.75
 --- !u!114 &4317828745373936784
 MonoBehaviour:
   m_ObjectHideFlags: 0

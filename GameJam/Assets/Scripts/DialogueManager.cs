@@ -9,9 +9,12 @@ public class DialogueManager : MonoBehaviour
 {
 	public TextMeshProUGUI dialogueText;
 
+	public float typingSpeed;
+
 	private Queue<string> sentences;
 
-	public int textTimer = 1000;
+	public int textTimer = 5000;
+	private int textCount;
 
 	[TextArea(3, 10)]
 	public string[] text;
@@ -24,16 +27,16 @@ public class DialogueManager : MonoBehaviour
 		for (int i = 0; i < text.Length; i++) {
 			sentences.Enqueue(text[i]);
 		}
-
+		textCount = textTimer;
 		DisplayNextSentence();
 	}
 
     private void Update()
     {
-		textTimer--;
-		if (textTimer <= 0) {
+		textCount--;
+		if (textCount <= 0) {
 			DisplayNextSentence();
-			textTimer = 1000;
+			textCount = textTimer;
 		}
     }
 
@@ -57,7 +60,7 @@ public class DialogueManager : MonoBehaviour
 		foreach (char letter in sentence.ToCharArray())
 		{
 			dialogueText.text += letter;
-			yield return null;
+			yield return new WaitForSecondsRealtime(typingSpeed);
 		}
 	}
 
