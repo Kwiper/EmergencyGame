@@ -1,55 +1,69 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
+	public TextMeshProUGUI dialogueText;
 
-    private Queue<string> sentences;
+	private Queue<string> sentences;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        sentences = new Queue<string>();
-    }
+	public int textTimer = 1000;
+
+	[TextArea(3, 10)]
+	public string[] text;
+
+	// Use this for initialization
+	void Start()
+	{
+		sentences = new Queue<string>();
+
+		for (int i = 0; i < text.Length; i++) {
+			sentences.Enqueue(text[i]);
+		}
+
+		DisplayNextSentence();
+	}
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            DisplayNextSentence();
-
-        }
-
-        Debug.Log(sentences.Count);
+		textTimer--;
+		if (textTimer <= 0) {
+			DisplayNextSentence();
+			textTimer = 1000;
+		}
     }
 
-    public void StartDialogue(Dialogue dialogue) {
-        Debug.Log("Dialogue started");
 
-        sentences.Clear();
+    public void DisplayNextSentence()
+	{
+		if (sentences.Count == 0)
+		{
+			EndDialogue();
+			return;
+		}
 
-        foreach (string sentence in dialogue.sentences) {
-            sentences.Enqueue(sentence);
-        }
+		string sentence = sentences.Dequeue();
+		StopAllCoroutines();
+		StartCoroutine(TypeSentence(sentence));
+	}
 
-        DisplayNextSentence();
-    }
+	IEnumerator TypeSentence(string sentence)
+	{
+		dialogueText.text = "";
+		foreach (char letter in sentence.ToCharArray())
+		{
+			dialogueText.text += letter;
+			yield return null;
+		}
+	}
 
-    public void DisplayNextSentence() {
-        if (sentences.Count == 0) {
-            EndDialogue();
-            return;
-        }
+	private void EndDialogue()
+	{
 
-        string sentence = sentences.Dequeue();
-        Debug.Log(sentence);
+	}
 
-    }
-
-    void EndDialogue()
-    {
-        Debug.Log("End of conversation");
-
-    }
 }
