@@ -11,6 +11,7 @@ public class MovingPlatformPoints : MonoBehaviour
     void Start()
     {
         player = GameObject.Find("Player");
+        
     }
     private void OnTriggerEnter2D(Collider2D other){
         //Prevents the triggers from firing from anything other than the moving platform

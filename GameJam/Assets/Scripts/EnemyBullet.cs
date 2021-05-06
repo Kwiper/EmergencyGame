@@ -7,6 +7,7 @@ public class EnemyBullet : MonoBehaviour {
 	private Rigidbody2D rb;
 	private float speed = 5f;
 	private GameObject player;
+	private GameObject movingPlatform;
 	private Vector2 moveDirection;
     // Start is called before the first frame update
     void Start() {
@@ -14,13 +15,15 @@ public class EnemyBullet : MonoBehaviour {
         rb = GetComponent<Rigidbody2D>();
         moveDirection = (player.transform.position - transform.position).normalized * speed;
         rb.velocity = new Vector2(moveDirection.x, moveDirection.y);
+        movingPlatform = GameObject.Find("PointB (10)");
+        Physics.IgnoreLayerCollision(10, 11);
 //        Destroy(gameObject, 5f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+	    
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
@@ -30,13 +33,14 @@ public class EnemyBullet : MonoBehaviour {
 		    Destroy(gameObject);
 
 	    }
-	    else if (!other.gameObject.CompareTag("Player") && !other.gameObject.CompareTag("Elevator Points") ) {
+	    else if (other.gameObject.CompareTag("Elevator Points")) {
+			
+	    }
+	    else {
 		    Destroy(gameObject);
 	    }
-		string str = other.gameObject.tag;
-		bool isTrue = other.gameObject.CompareTag("Elevator Points");
-		Debug.Log(str);
-
+	    
     }
+	    
     
 }
