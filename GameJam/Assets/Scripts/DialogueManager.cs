@@ -13,8 +13,8 @@ public class DialogueManager : MonoBehaviour
 
 	private Queue<string> sentences;
 
-	public int textTimer = 5000;
-	private int textCount;
+	public float textTimer = 5;
+	public float textCount;
 
 	[TextArea(3, 10)]
 	public string[] text;
@@ -33,7 +33,7 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
-		textCount--;
+		textCount -= Time.deltaTime;
 		if (textCount <= 0) {
 			DisplayNextSentence();
 			textCount = textTimer;

@@ -156,7 +156,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 614543954}
   typingSpeed: 0.05
-  textTimer: 4000
+  textTimer: 5
+  textCount: 0
   text:
   - EMERGENCY. EMERGENCY. EMERGENCY.
   - THERE IS AN EMERGENCY IN SECTION C.
@@ -188,7 +189,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e2fb090fe8f126c4c97c07303bcd1a48, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.35
   m_Pitch: 1
   Loop: 0
   Mute: 0
