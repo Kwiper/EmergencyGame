@@ -24,7 +24,7 @@ public class BasicEnemyBehavior : MonoBehaviour {
 	{
 		if (isWithinTrigger) {
 			if(Time.time > shootTimer) {
-				Instantiate(bullet, transform.position, Quaternion.identity);
+				Instantiate(bullet, transform.position, transform.rotation);
 				shootTimer = Time.time + fireRate / 1000;
 //				Vector2 lastPlayerPos = new Vector2(player.transform.position.x, player.transform.position.y);
 //				Vector2 enemyPos = new Vector2(transform.position.x, transform.position.y+2);

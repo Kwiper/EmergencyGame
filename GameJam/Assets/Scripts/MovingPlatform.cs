@@ -33,6 +33,9 @@ public class MovingPlatform : MonoBehaviour
 
     private bool hit;
     private GameObject player;
+    public bool resetYes;
+
+    private Vector2 startposition;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,7 +43,9 @@ public class MovingPlatform : MonoBehaviour
         tr = GetComponent<Transform>();
         bc = GetComponent<BoxCollider2D>();
         player = GameObject.Find("Player");
+        startposition = transform.position;
     }
+    
 
     private void OnCollisionEnter2D(Collision2D other){
             isMoving = true;
@@ -64,7 +69,7 @@ public class MovingPlatform : MonoBehaviour
     private void FixedUpdate()
     {
         //Travel up state
-        if(isMoving == true){
+        if(isMoving){
             // if(inReverse == false){
             // inRange += incrementAmount;
             // if(inRange >= range)inReverse = true;
@@ -75,13 +80,13 @@ public class MovingPlatform : MonoBehaviour
             // if(inRange <= 0)inReverse = false;
             // transform.position -= (velocity*Time.deltaTime);
             // }
-             if(inReverse == false){
+             if(!inReverse){
                 //hit = Physics2D.OverlapCircle(tr.position,detectRadius , targetLayer);
                 velocity = (pointB.GetComponent<Transform>().position - transform.position).normalized * speed;
                 transform.position += (velocity*Time.deltaTime);
                 //if(hit == true)inReverse = true;
              }
-             else if(inReverse == true){
+             else if(inReverse){
                 //hit = Physics2D.OverlapCircle(tr.position,detectRadius , targetLayer);
                 velocity = (pointA.GetComponent<Transform>().position- transform.position).normalized * speed;
                 
@@ -89,9 +94,15 @@ public class MovingPlatform : MonoBehaviour
                 //if(hit == true)inReverse = false;
              }
 
-        }  
+        }
 
+        
 
+    }
 
+    public void ResetBackToStart() {
+	   
+	    transform.position = startposition;
+	    Debug.Log(transform.position);
     }
 }

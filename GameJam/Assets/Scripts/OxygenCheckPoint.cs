@@ -7,6 +7,8 @@ public class OxygenCheckPoint : MonoBehaviour
 
     private bool activated = false;
     private BoxCollider2D bc;
+
+    private string lastCheckpointName;
     // Start is called before the first frame update
     public void Start()
     {
@@ -19,8 +21,13 @@ public class OxygenCheckPoint : MonoBehaviour
         if (other.CompareTag("Player")){
             if(activated == false){
             FindObjectOfType<OyxgenManager>().oxygenRegenCheckpoint();
-            FindObjectOfType<OyxgenManager>().oxygenSaveCheckPoint();
+//            FindObjectOfType<OyxgenManager>().oxygenSaveCheckPoint();
             activated = true;
+            lastCheckpointName = gameObject.name;
+            GameObject player = GameObject.Find("Player");
+            player.GetComponent<PlayerMovement>().SetLastPlayerPos(transform.position);
+            
+
             }
         }
     }

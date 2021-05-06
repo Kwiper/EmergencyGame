@@ -45,6 +45,9 @@ public class PlayerMovement : MonoBehaviour
 	
 	// This animator is for the player's animations
 	private Animator player_anim;
+
+	private Vector2 lastPlayerPos;
+	
     // Start is called before the first frame update
     void Start()
     {
@@ -52,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
         wallHopDirection.Normalize();
         wallJumpDirection.Normalize();
         player_anim = gameObject.GetComponent<Animator>();
-        
+        lastPlayerPos = transform.position;
     }
 
     // Update is called once per frame
@@ -65,7 +68,11 @@ public class PlayerMovement : MonoBehaviour
             CheckIfCanJump();
             CheckIfWallSliding();
             Animate();
+//            Debug.Log(facingDirection);
+//            Debug.Log(movementInputDirection);
+
         }
+        
     }
 
     private void FixedUpdate()
@@ -162,11 +169,15 @@ public class PlayerMovement : MonoBehaviour
         }
         else if ((isWallSliding || isTouchingWall) && movementInputDirection != 0 && canJump) // Wall jump
         {
-            isWallSliding = false;
-            Vector2 forceToAdd = new Vector2(wallJumpForce * wallJumpDirection.x * movementInputDirection, wallJumpForce * wallJumpDirection.y);
-            rb.AddForce(forceToAdd, ForceMode2D.Impulse);
-            isJumping = true;
-            FindObjectOfType<OyxgenManager>().jumpDeplete();
+
+            if ((facingDirection > 0 && movementInputDirection < 0) || (facingDirection < 0 && movementInputDirection > 0))
+            {
+                isWallSliding = false;
+                Vector2 forceToAdd = new Vector2(wallJumpForce * wallJumpDirection.x * movementInputDirection, wallJumpForce * wallJumpDirection.y);
+                rb.AddForce(forceToAdd, ForceMode2D.Impulse);
+                isJumping = true;
+                FindObjectOfType<OyxgenManager>().jumpDeplete();
+            }
         }
     }
 
@@ -210,6 +221,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (isWallSliding)
         {
+            coyoteCount = 0;
             if (rb.velocity.y < -wallSlideSpeed)
             {
                 rb.velocity = new Vector2(rb.velocity.x, -wallSlideSpeed);
@@ -272,6 +284,14 @@ public class PlayerMovement : MonoBehaviour
             player_anim.SetBool("isJumping", false);
         }
 
+    }
+
+    public void SetLastPlayerPos(Vector2 position) {
+	    lastPlayerPos = position;
+    }
+
+    public void ResetPlayerToLastCheckpoint() {
+	    transform.position = lastPlayerPos;
     }
     
 }
