@@ -21,12 +21,12 @@ public class SectionScript : MonoBehaviour {
     {
 	    if (triggeredEnter) {
 		    if (audio.volume < 0.35f) {
-			    audio.volume += 0.05f * Time.deltaTime;
+			    audio.volume += 0.2f * Time.deltaTime;
 		    }
 	    }
 	    if (triggeredExit) {
 		    if (audio.volume > 0) {
-			    audio.volume -= 0.1f * Time.deltaTime;
+			    audio.volume -= 0.35f * Time.deltaTime;
 		    }
 	    }
     }
