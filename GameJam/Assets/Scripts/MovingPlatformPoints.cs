@@ -6,12 +6,14 @@ public class MovingPlatformPoints : MonoBehaviour
 {
     public MovingPlatform movingPlatform;
     private GameObject player;
+
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.Find("Player");
     }
     private void OnTriggerEnter2D(Collider2D other){
-        if(other.gameObject != player) movingPlatform.setInReverse();
+        //Prevents the triggers from firing from anything other than the moving platform
+        if(other.gameObject != player && other.gameObject.tag != "Bullet") movingPlatform.setInReverse();
     }
 }
