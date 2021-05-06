@@ -8294,6 +8294,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6476770226528452521, guid: 0782a8c964421e44d93842d889c06d27,
         type: 3}
+      propertyPath: wallJumpForce
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 6476770226528452521, guid: 0782a8c964421e44d93842d889c06d27,
+        type: 3}
       propertyPath: wallCheckDistance
       value: 0.35
       objectReference: {fileID: 0}
