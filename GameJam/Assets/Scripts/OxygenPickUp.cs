@@ -15,14 +15,11 @@ public class OxygenPickUp : MonoBehaviour {
         if (other.CompareTag("Player"))
         {	
 	        FindObjectOfType<OyxgenManager>().oxygenRegenPickup();
-	        oxygenSound();
-            Destroy(gameObject);
+	        audio.Play();
+	        GetComponent<CircleCollider2D>().enabled = false;
+	        GetComponent<SpriteRenderer>().enabled = false;
         }    
     }
-
-    IEnumerator oxygenSound() {
-	    audio.Play();
-	    yield return new WaitForSeconds(audio.clip.length);
-    }
+    
 
 }

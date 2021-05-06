@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OxygenCheckPoint : MonoBehaviour
-{
-
+public class OxygenCheckPoint : MonoBehaviour {
+	private AudioSource audio;
     private bool activated = false;
     private BoxCollider2D bc;
 
@@ -13,6 +12,7 @@ public class OxygenCheckPoint : MonoBehaviour
     public void Start()
     {
         bc = GetComponent<BoxCollider2D>();
+        audio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -20,12 +20,13 @@ public class OxygenCheckPoint : MonoBehaviour
 
         if (other.CompareTag("Player")){
             if(activated == false){
-            FindObjectOfType<OyxgenManager>().oxygenRegenCheckpoint();
-//            FindObjectOfType<OyxgenManager>().oxygenSaveCheckPoint();
-            activated = true;
-            lastCheckpointName = gameObject.name;
-            GameObject player = GameObject.Find("Player");
-            player.GetComponent<PlayerMovement>().SetLastPlayerPos(transform.position);
+	            audio.Play();
+		        FindObjectOfType<OyxgenManager>().oxygenRegenCheckpoint();
+		//            FindObjectOfType<OyxgenManager>().oxygenSaveCheckPoint();
+		        activated = true;
+		        lastCheckpointName = gameObject.name;
+		        GameObject player = GameObject.Find("Player");
+		        player.GetComponent<PlayerMovement>().SetLastPlayerPos(transform.position);
             
 
             }
