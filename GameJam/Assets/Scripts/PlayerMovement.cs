@@ -68,8 +68,8 @@ public class PlayerMovement : MonoBehaviour
             CheckIfCanJump();
             CheckIfWallSliding();
             Animate();
-            Debug.Log(facingDirection);
-            Debug.Log(movementInputDirection);
+//            Debug.Log(facingDirection);
+//            Debug.Log(movementInputDirection);
 
         }
         
