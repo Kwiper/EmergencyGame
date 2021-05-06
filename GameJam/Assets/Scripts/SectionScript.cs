@@ -26,7 +26,7 @@ public class SectionScript : MonoBehaviour {
 	    }
 	    if (triggeredExit) {
 		    if (audio.volume > 0) {
-			    audio.volume -= 0.05f * Time.deltaTime;
+			    audio.volume -= 0.1f * Time.deltaTime;
 		    }
 	    }
     }
