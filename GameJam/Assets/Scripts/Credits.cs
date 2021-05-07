@@ -19,10 +19,15 @@ public class Credits : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+    }
+
+    void FixedUpdate(){
         Debug.Log(timer);
         timer-=Time.deltaTime;
         rt.Translate(0,speed,0);
         if(timer < 0) SceneManager.LoadScene(0);
+
     }
 
 
