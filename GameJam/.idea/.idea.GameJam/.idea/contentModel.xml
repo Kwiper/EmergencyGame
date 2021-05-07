@@ -26,6 +26,7 @@
           <e p="OxygenCheckPoint.cs" t="Include" />
           <e p="OxygenPickUp.cs" t="Include" />
           <e p="OyxgenManager.cs" t="Include" />
+          <e p="PercentageText.cs" t="Include" />
           <e p="PlayButton.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
           <e p="SectionScript.cs" t="Include" />
