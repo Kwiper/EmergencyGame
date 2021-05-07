@@ -47,6 +47,12 @@ public class PlayerMovement : MonoBehaviour
 	private Animator player_anim;
 
 	private Vector2 lastPlayerPos;
+	public AudioClip walking;
+	public AudioClip walljump;
+	public AudioClip jump;
+	public AudioClip hit;
+
+	private AudioSource playerAudio;
 	
     // Start is called before the first frame update
     void Start()
@@ -56,6 +62,9 @@ public class PlayerMovement : MonoBehaviour
         wallJumpDirection.Normalize();
         player_anim = gameObject.GetComponent<Animator>();
         lastPlayerPos = transform.position;
+
+        playerAudio = GetComponent<AudioSource>();
+        
     }
 
     // Update is called once per frame
@@ -249,15 +258,18 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void Animate() {
-	    if(movementInputDirection != 0 && !isWallSliding)
-	    {
+	    if(movementInputDirection != 0 && !isWallSliding) {
+		    playerAudio.clip = walking;
 		    player_anim.SetBool("isMoving", true);
+		    
 	    }
 	    else {
+		    
 		    player_anim.SetBool("isMoving", false); 
 	    }
         if (isWallSliding && !isGrounded)
         {
+	        
             player_anim.SetBool("isWallSliding", true);
         }
         else
