@@ -27,6 +27,9 @@ public class TestCamera : MonoBehaviour
     //Boolean for jump
     private bool jump;
     // Start is called before the first frame update
+
+    //Might resolve the bobbing camera when we export
+    public float zAxis = -4f;
     void Start()
     {
         
@@ -81,7 +84,7 @@ public class TestCamera : MonoBehaviour
             if(Mathf.Abs(vDir) < Mathf.Abs(retractAmount))vDir = 0;
             else vDir += retractAmount;           
         }
-        transform.position = new Vector3(player.transform.position.x+offsetH, player.transform.position.y-offsetV, -4f);
+        transform.position = new Vector3(player.transform.position.x+offsetH, player.transform.position.y-offsetV, zAxis);
     }
 
 
