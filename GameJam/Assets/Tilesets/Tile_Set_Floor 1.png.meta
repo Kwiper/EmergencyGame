@@ -1,0 +1,780 @@
+fileFormatVersion: 2
+guid: 7fb4a8185a1e7b34f962883e7121d3e6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4341566085777179861
+    second: Tile_Set_Floor 1_0
+  - first:
+      213: 6984738337093737818
+    second: Tile_Set_Floor 1_1
+  - first:
+      213: 5581459927388444899
+    second: Tile_Set_Floor 1_2
+  - first:
+      213: -4460933591800215917
+    second: Tile_Set_Floor 1_3
+  - first:
+      213: 9005984487985914642
+    second: Tile_Set_Floor 1_4
+  - first:
+      213: 6550047594871959582
+    second: Tile_Set_Floor 1_5
+  - first:
+      213: 4539274255415352160
+    second: Tile_Set_Floor 1_6
+  - first:
+      213: 2369611209347510111
+    second: Tile_Set_Floor 1_7
+  - first:
+      213: 817627182150472343
+    second: Tile_Set_Floor 1_8
+  - first:
+      213: 3826663836262972783
+    second: Tile_Set_Floor 1_9
+  - first:
+      213: 7361152205715191982
+    second: Tile_Set_Floor 1_10
+  - first:
+      213: -3207978946347155069
+    second: Tile_Set_Floor 1_11
+  - first:
+      213: 3776778581137595035
+    second: Tile_Set_Floor 1_12
+  - first:
+      213: 2024895280557382254
+    second: Tile_Set_Floor 1_13
+  - first:
+      213: 4928450844346378050
+    second: Tile_Set_Floor 1_14
+  - first:
+      213: -61846733731233457
+    second: Tile_Set_Floor 1_15
+  - first:
+      213: -4186045500701553337
+    second: Tile_Set_Floor 1_16
+  - first:
+      213: 6194418895146555258
+    second: Tile_Set_Floor 1_17
+  - first:
+      213: 2485311981353948584
+    second: Tile_Set_Floor 1_18
+  - first:
+      213: 9184263680731609543
+    second: Tile_Set_Floor 1_19
+  - first:
+      213: -2413205739212085182
+    second: Tile_Set_Floor 1_20
+  - first:
+      213: 4367753492585994701
+    second: Tile_Set_Floor 1_21
+  - first:
+      213: -8293740338890635325
+    second: Tile_Set_Floor 1_22
+  - first:
+      213: -4675527284210943235
+    second: Tile_Set_Floor 1_23
+  - first:
+      213: 6043545928838881315
+    second: Tile_Set_Floor 1_24
+  - first:
+      213: 612369506713605242
+    second: Tile_Set_Floor 1_25
+  - first:
+      213: 8252041107303726023
+    second: Tile_Set_Floor 1_26
+  - first:
+      213: -1680528802285091842
+    second: Tile_Set_Floor 1_27
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 800
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Tile_Set_Floor 1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2400
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d4c1a73a57504c30800000000000000
+      internalID: 4341566085777179861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Set_Floor 1_1
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 2400
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5d5687c286cee060800000000000000
+      internalID: 6984738337093737818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Set_Floor 1_2
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 2400
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e8d01c6b34557d40800000000000000
+      internalID: 5581459927388444899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Set_Floor 1_3
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 2400
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 396042688849712c0800000000000000
+      internalID: -4460933591800215917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Set_Floor 1_4
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 2400
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21324131d2fabfc70800000000000000
+      internalID: 9005984487985914642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Set_Floor 1_5
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 2400
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e10be3a759176ea50800000000000000
+      internalID: 6550047594871959582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Set_Floor 1_6
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 2400
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06b9b1c92edbefe30800000000000000
+      internalID: 4539274255415352160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Set_Floor 1_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1600
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5f21f417dc82e020800000000000000
+      internalID: 2369611209347510111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Set_Floor 1_8
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1600
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79258c6179bc85b00800000000000000
+      internalID: 817627182150472343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Set_Floor 1_9
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 1600
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6db94b0c7a0b1530800000000000000
+      internalID: 3826663836262972783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Set_Floor 1_10
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 1600
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea8bc371ee0182660800000000000000
+      internalID: 7361152205715191982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Set_Floor 1_11
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 1600
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 381cb081528fa73d0800000000000000
+      internalID: -3207978946347155069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Set_Floor 1_12
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 1600
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9a920cfb10d96430800000000000000
+      internalID: 3776778581137595035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Set_Floor 1_13
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 1600
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6adcf0878fd91c10800000000000000
+      internalID: 2024895280557382254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Set_Floor 1_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 800
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2476d3e4eef556440800000000000000
+      internalID: 4928450844346378050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Set_Floor 1_15
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 800
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f418e6d29b6442ff0800000000000000
+      internalID: -61846733731233457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Set_Floor 1_16
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 800
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74dcf05bbcd28e5c0800000000000000
+      internalID: -4186045500701553337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Set_Floor 1_17
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 800
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a779d2b6a2ff6f550800000000000000
+      internalID: 6194418895146555258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Set_Floor 1_18
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 800
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a5df9c441a9d7220800000000000000
+      internalID: 2485311981353948584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Set_Floor 1_19
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 800
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c97785482f057f70800000000000000
+      internalID: 9184263680731609543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Set_Floor 1_20
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 800
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24864587a22928ed0800000000000000
+      internalID: -2413205739212085182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Set_Floor 1_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc95f0009a06d9c30800000000000000
+      internalID: 4367753492585994701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Set_Floor 1_22
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 0
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c788199a17b6ec80800000000000000
+      internalID: -8293740338890635325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Set_Floor 1_23
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 0
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfab5fef4b03d1fb0800000000000000
+      internalID: -4675527284210943235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Set_Floor 1_24
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 0
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3202330900dfed350800000000000000
+      internalID: 6043545928838881315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Set_Floor 1_25
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 0
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7412f662d29f7800800000000000000
+      internalID: 612369506713605242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Set_Floor 1_26
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 0
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cb72c87aa3258270800000000000000
+      internalID: 8252041107303726023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile_Set_Floor 1_27
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 0
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef30cf845ff8da8e0800000000000000
+      internalID: -1680528802285091842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
