@@ -30,6 +30,8 @@ public class EndCutsceneTrigger : MonoBehaviour
 	    if (other.gameObject.CompareTag("Player")) {
             Debug.Log("I happen");
             hasTriggered = true;
+            // turn off oxygen counting down to prevent player from resetting to checkpoint and subsequently going to ending if player is low enough to die.
+            FindObjectOfType<OyxgenManager>().oxygenCountdownToggle = false;
             ending.Play();
 	    }
 
