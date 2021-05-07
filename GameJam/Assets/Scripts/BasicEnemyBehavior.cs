@@ -23,21 +23,16 @@ public class BasicEnemyBehavior : MonoBehaviour {
 	void Update()
 	{
 		if (isWithinTrigger) {
+			// fire at player every "firerate" milliseconds
 			if(Time.time > shootTimer) {
 				Instantiate(bullet, transform.position, transform.rotation);
 				shootTimer = Time.time + fireRate / 1000;
-//				Vector2 lastPlayerPos = new Vector2(player.transform.position.x, player.transform.position.y);
-//				Vector2 enemyPos = new Vector2(transform.position.x, transform.position.y+2);
-
-//				Vector2 direction = enemyPos - lastPlayerPos;
-//				projectile.GetComponent<Rigidbody2D>().velocity = direction * 5;
-//				projectile.transform.position =
-//					Vector2.MoveTowards(projectile.transform.position, direction, bulletSpeed);
 			}
 		}
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
+		// if the player has collided with the area of which the enemy operates at
 		if (other.CompareTag("Player")) {
 			Debug.Log("Collide");
 			isWithinTrigger = true;
