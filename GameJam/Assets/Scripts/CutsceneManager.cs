@@ -13,7 +13,14 @@ public class CutsceneManager : MonoBehaviour
     void Start()
     {
         audio = GetComponent<AudioSource>();
+        
         audio.Play();
+    }
+
+    void Awake() {
+	    if (PlayerPrefs.HasKey("maxVolume")) {
+		    audio.volume = PlayerPrefs.GetFloat("maxVolume");
+	    }
     }
 
     // Update is called once per frame

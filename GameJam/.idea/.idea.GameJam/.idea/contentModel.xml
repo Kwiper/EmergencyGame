@@ -6,6 +6,7 @@
     <e p="D:\Documents\Game_Jam\EmergencyGame\GameJam" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Options.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="AudioManager.cs" t="Include" />
           <e p="BasicEnemyBehavior.cs" t="Include" />
@@ -22,12 +23,12 @@
           <e p="MovingPlatformPoints.cs" t="Include" />
           <e p="OffBlock.cs" t="Include" />
           <e p="OnBlock.cs" t="Include" />
+          <e p="OptionsMenu.cs" t="Include" />
           <e p="OxygenBar.cs" t="Include" />
           <e p="OxygenCheckPoint.cs" t="Include" />
           <e p="OxygenPickUp.cs" t="Include" />
           <e p="OyxgenManager.cs" t="Include" />
           <e p="PercentageText.cs" t="Include" />
-          <e p="PlayButton.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
           <e p="SectionScript.cs" t="Include" />
           <e p="Switch.cs" t="Include" />

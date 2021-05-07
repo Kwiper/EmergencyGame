@@ -12,11 +12,15 @@ public class SectionScript : MonoBehaviour {
 	private bool triggeredEnter;
     // Start is called before the first frame update
     void Start() {
-		if(PlayerPrefs.HasKey("maxVolume")){	
-			maxVolume = PlayerPrefs.GetFloat("maxVolume");
-		}
+		
 	    audio = GetComponent<AudioSource>();
 	    audio.Play();
+    }
+
+    void Awake() {
+	    if(PlayerPrefs.HasKey("maxVolume")){	
+		    maxVolume = PlayerPrefs.GetFloat("maxVolume");
+	    }
     }
 
 
@@ -25,7 +29,10 @@ public class SectionScript : MonoBehaviour {
     void Update()
     {
 	    if (triggeredEnter) {
-		    if (audio.volume < maxVolume) {
+		    if (gameObject.name == "Section 1") {
+			    audio.volume = maxVolume;
+		    }
+		    else if (audio.volume < maxVolume) {
 			    audio.volume += 0.2f * Time.deltaTime;
 		    }
 	    }

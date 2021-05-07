@@ -14,6 +14,13 @@ public class EndCutsceneTrigger : MonoBehaviour
         ending = GetComponent<AudioSource>();
     }
 
+    void Awake() {
+	    if (PlayerPrefs.HasKey("maxVolume")) {
+		    ending.volume = PlayerPrefs.GetFloat("maxVolume");
+	    }
+
+    }
+
     private void Update()
     {
         if (hasTriggered) {
