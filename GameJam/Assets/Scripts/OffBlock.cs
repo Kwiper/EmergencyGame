@@ -36,7 +36,7 @@ public class OffBlock : MonoBehaviour
             }
             else
             {
-                tilemap.color = new Color(1.0f, 0.0f, 0.0f, 0.5f);
+                tilemap.color = new Color(1.0f, 0.0f, 0.0f, 0.2f);
                 gameObject.layer = LayerMask.NameToLayer("Inactive");
             }
             changed = true;
