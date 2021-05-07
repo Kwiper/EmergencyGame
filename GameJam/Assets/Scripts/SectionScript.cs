@@ -7,20 +7,25 @@ public class SectionScript : MonoBehaviour {
 
 	private AudioSource audio;
 
-	
+	private float maxVolume;
 
 	private bool triggeredEnter;
     // Start is called before the first frame update
     void Start() {
+		if(PlayerPrefs.HasKey("maxVolume")){	
+			maxVolume = PlayerPrefs.GetFloat("maxVolume");
+		}
 	    audio = GetComponent<AudioSource>();
 	    audio.Play();
     }
+
+
 
     // Update is called once per frame
     void Update()
     {
 	    if (triggeredEnter) {
-		    if (audio.volume < 0.35f) {
+		    if (audio.volume < maxVolume) {
 			    audio.volume += 0.2f * Time.deltaTime;
 		    }
 	    }
