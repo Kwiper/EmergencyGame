@@ -47,12 +47,12 @@ public class PlayerMovement : MonoBehaviour
 	private Animator player_anim;
 
 	private Vector2 lastPlayerPos;
-	public AudioClip walking;
-	public AudioClip walljump;
-	public AudioClip jump;
-	public AudioClip hit;
+//	public AudioClip walking;
+//	public AudioClip walljump;
+//	public AudioClip jump;
+//	public AudioClip hit;
 
-	private AudioSource playerAudio;
+//	private AudioSource playerAudio;
 	
     // Start is called before the first frame update
     void Start()
@@ -63,7 +63,7 @@ public class PlayerMovement : MonoBehaviour
         player_anim = gameObject.GetComponent<Animator>();
         lastPlayerPos = transform.position;
 
-        playerAudio = GetComponent<AudioSource>();
+//        playerAudio = GetComponent<AudioSource>();
         
     }
 
