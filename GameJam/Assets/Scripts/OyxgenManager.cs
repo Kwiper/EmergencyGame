@@ -34,7 +34,7 @@ public class OyxgenManager : MonoBehaviour {
 
 	private GameObject[] MovingPlatformArr;
 
-	public bool oxygenCountdownToggle = false;
+	public bool oxygenCountdownToggle;
 
 	public OxygenBar oxygenBar;
 	
