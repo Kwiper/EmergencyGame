@@ -259,7 +259,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Animate() {
 	    if(movementInputDirection != 0 && !isWallSliding) {
-		    playerAudio.clip = walking;
+//		    playerAudio.clip = walking;
 		    player_anim.SetBool("isMoving", true);
 		    
 	    }
