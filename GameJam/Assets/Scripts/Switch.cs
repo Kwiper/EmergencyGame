@@ -49,7 +49,7 @@ public class Switch : MonoBehaviour
     }
 
     private void Animate() {
-        if (toggled)
+        if (FindObjectOfType<GameManager>().state)
         {
             switch_anim.SetBool("isGreen", true);
         }
