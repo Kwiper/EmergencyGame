@@ -1,11 +1,14 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class OyxgenManager : MonoBehaviour {
 	public float oxygen = 1000;
-
+	public float maxOxygen;
+	
 	public float oxygenCheckPointMin = 500;
 	
 	// stores the last value of oxygen at a checkpoint
@@ -37,16 +40,21 @@ public class OyxgenManager : MonoBehaviour {
 	public bool oxygenCountdownToggle;
 
 	public OxygenBar oxygenBar;
+	public TextMeshProUGUI percentageText;
 	
-	void Start()
-    {
+	void Start() {
+		maxOxygen = oxygen;
         oxygenBar.SetMaxOxygen(oxygen);
         oxygenLastCheck = oxygen;
     }
     
     void Update() {
 	    oxygenBar.SetOxygen(oxygen);
-	    if(oxygenCountdownToggle) oxygen -= Time.deltaTime * passiveSubtractTime;
+	    float currentPercentage = (oxygen / maxOxygen) * 100;
+	    string currentPercentageString = currentPercentage.ToString("F1");
+	    percentageText.text = currentPercentageString + "%";
+	    
+	    
 	    if (oxygen <= 0) {
 		    FindObjectOfType<PlayerMovement>().ResetPlayerToLastCheckpoint();
 		    oxygen = oxygenLastCheck;
@@ -58,6 +66,10 @@ public class OyxgenManager : MonoBehaviour {
 
 
 	    }
+    }
+
+    private void FixedUpdate() {
+	    if(oxygenCountdownToggle) oxygen -= Time.deltaTime * passiveSubtractTime;
     }
 
     public void jumpDeplete() {
