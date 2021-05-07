@@ -12,10 +12,14 @@ public class Switch : MonoBehaviour
 	private float intervalTimeInMilliseconds = 500f;
     private float toggleTime;
     //public GameObject objectToChange;
+
+    private Animator switch_anim;
+
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.Find("Player");
+        switch_anim = gameObject.GetComponent<Animator>();
     }
 
     void OnTriggerEnter2D(Collider2D other){
@@ -36,10 +40,21 @@ public class Switch : MonoBehaviour
         }
     }
     void Update(){
-        if(inRange && !toggled){
+        Animate();
+        if (inRange && !toggled){
             //GameManager set state
             FindObjectOfType<GameManager>().setState();
             toggled = true;
+        }
+    }
+
+    private void Animate() {
+        if (toggled)
+        {
+            switch_anim.SetBool("isGreen", true);
+        }
+        else {
+            switch_anim.SetBool("isGreen", false);
         }
     }
 }
