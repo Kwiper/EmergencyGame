@@ -21,10 +21,10 @@ public class OnBlock : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(recState != FindObjectOfType<Switch>().state)
+        if(recState != FindObjectOfType<GameManager>().state)
         {
             changed = false;
-            recState = FindObjectOfType<Switch>().state;
+            recState = FindObjectOfType<GameManager>().state;
         }
         if (!changed)
         {
