@@ -182,114 +182,129 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'THANKS FOR PLAYING
 
+    
 
-
+    
 
     By PSW Crew
 
+    
 
+    
 
-    Nathan Cerone
+    Nathan
+    Cerone
 
-    Herman
-    Chan
+    Herman Chan
+
+    Sirius Li
 
     Benedict Wong
 
     Alen Pontejos
 
-    Jonathan Newman
+    Jonathan
+    Newman
 
+    
 
+    
 
-
-
-    Project
-    Lead:
+    Project Lead:
 
     Nathan Cerone
 
+    
 
+    
 
-
-
-    Level Design:
+    Level
+    Design:
 
     Herman Chan
 
+    
 
+    
 
+    Enemy Programming:
 
+    Benedict
+    Wong:
 
-    Enemy
-    Programming:
+    
 
-    Benedict Wong:
-
-
-
-
+    
 
     Player Programming:
 
     Jonathan Newman
 
+    
 
-
-
+    
 
     Environment
     Programming:
 
     Nathan Cerone
 
+    
 
+    
 
-
-
-    Character Design, Sprites and Backgrounds:
+    Character Design, Sprites:
 
     Alen
     Pontejos
 
+    
+
+    
+
+    Backgrounds:
+
+    Sirius Li
+
+    Alen Pontejos
 
 
+    
 
-
-    Gameplay Design:
+    Gameplay
+    Design:
 
     Herman Chan
 
     Benedict Wong
 
+    
 
+    
 
+    Music and SFX:
 
+    Jonathan
+    Newman
 
-    Music
-    and SFX:
+    
 
-    Jonathan Newman
-
-
-
-
+    
 
     Reconstruct Font by Pixel Sagas:
 
     https://www.dafont.com/reconstruct.font?l[]=10&l[]=1
 
+    
 
-
-
+    
 
     Stormfaze
     Font by Typodermic Fonts:
 
     https://www.dafont.com/stormfaze.font?l[]=10&l[]=1
 
-
-
+    
 
     Motivational
     Support:
@@ -298,17 +313,17 @@ MonoBehaviour:
 
     Take-out delivery food
 
-    Herman''s Monster Energy
+    Herman''s Monster
+    Energy
 
-    The
-    Desire to Have a Good Portfolio
+    The Desire to Have a Good Portfolio
 
+    
 
+    
 
-
-
-    THANKS FOR PLAYING
-
+    THANKS FOR
+    PLAYING
 
 '
   m_isRightToLeft: 0
@@ -374,7 +389,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: -3601.4465, z: 2.5809937, w: -1294.5918}
+  m_margin: {x: 0, y: -3601.4465, z: 2.5809937, w: -147.29395}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
