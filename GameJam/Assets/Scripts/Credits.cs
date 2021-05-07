@@ -6,7 +6,9 @@ public class Credits : MonoBehaviour
 {
     public float speed;
 
-    public int time;
+    //public int time;
+
+    public float timer = 70f;
     private RectTransform rt;
     // Start is called before the first frame update
     void Start()
@@ -17,10 +19,10 @@ public class Credits : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(time);
+        Debug.Log(timer);
+        timer-=Time.deltaTime;
         rt.Translate(0,speed,0);
-        time--;
-        if(time == 0) SceneManager.LoadScene(0);
+        if(timer < 0) SceneManager.LoadScene(0);
     }
 
 
