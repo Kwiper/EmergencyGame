@@ -152,6 +152,7 @@ MonoBehaviour:
   retractAmount: 0.2
   offsetH: 0.5
   offsetV: 1
+  zAxis: 0
 --- !u!1001 &15381399
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8897,6 +8898,11 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 11647274}
+    - target: {fileID: 2188762851187787629, guid: 2a481881e4be2aa43937f21d10be4435,
+        type: 3}
+      propertyPath: m_Lens.FieldOfView
+      value: 80
+      objectReference: {fileID: 0}
     - target: {fileID: 2188762851187787629, guid: 2a481881e4be2aa43937f21d10be4435,
         type: 3}
       propertyPath: m_Lens.NearClipPlane
@@ -61239,7 +61245,7 @@ Camera:
     height: 1
   near clip plane: 5.79
   far clip plane: 1000
-  field of view: 60
+  field of view: 80
   orthographic: 0
   orthographic size: 9
   m_Depth: -1
@@ -61288,6 +61294,7 @@ MonoBehaviour:
   retractAmount: 0.2
   offsetH: 0.5
   offsetV: 1
+  zAxis: -4
 --- !u!114 &1527734497
 MonoBehaviour:
   m_ObjectHideFlags: 0
