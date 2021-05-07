@@ -10,10 +10,12 @@
           <e p="AudioManager.cs" t="Include" />
           <e p="BasicEnemyBehavior.cs" t="Include" />
           <e p="Credits.cs" t="Include" />
+          <e p="CutsceneManager.cs" t="Include" />
           <e p="DialogueManager.cs" t="Include" />
           <e p="EndCutsceneTrigger.cs" t="Include" />
           <e p="EnemyBullet.cs" t="Include" />
           <e p="FadeAudioSource.cs" t="Include" />
+          <e p="GameManager.cs" t="Include" />
           <e p="KillzoneManager.cs" t="Include" />
           <e p="MainMenu.cs" t="Include" />
           <e p="MovingPlatform.cs" t="Include" />

@@ -7,7 +7,7 @@ public class SectionScript : MonoBehaviour {
 
 	private AudioSource audio;
 
-	private bool triggeredExit;
+	
 
 	private bool triggeredEnter;
     // Start is called before the first frame update
@@ -24,28 +24,39 @@ public class SectionScript : MonoBehaviour {
 			    audio.volume += 0.2f * Time.deltaTime;
 		    }
 	    }
-	    if (triggeredExit) {
+	    else if (!triggeredEnter) {
 		    if (audio.volume > 0) {
 			    audio.volume -= 0.35f * Time.deltaTime;
 		    }
 	    }
     }
 
-    private void OnTriggerEnter2D(Collider2D other) {
+//    private void OnTriggerEnter2D(Collider2D other) {
+//	    if (other.gameObject.CompareTag("Player")) {
+//		    triggeredEnter = true;
+//
+//	    }
+//    }
+//
+//
+//    private void OnTriggerExit2D(Collider2D other) {
+//	    if (other.gameObject.CompareTag("Player")) {
+//		    triggeredExit = true;
+//
+//	    }
+//    }
+
+    private void OnTriggerStay2D(Collider2D other) {
 	    if (other.gameObject.CompareTag("Player")) {
 		    triggeredEnter = true;
-
 	    }
     }
-
 
     private void OnTriggerExit2D(Collider2D other) {
 	    if (other.gameObject.CompareTag("Player")) {
-		    triggeredExit = true;
-
+		    triggeredEnter = false;
 	    }
     }
-    
     
     
 }

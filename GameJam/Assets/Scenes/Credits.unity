@@ -157,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -4075}
+  m_AnchoredPosition: {x: 0, y: -5599}
   m_SizeDelta: {x: 1114.09, y: 121.3023}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &39762770
@@ -185,7 +185,10 @@ MonoBehaviour:
 
 
 
+
     By PSW Crew
+
+
 
 
 
@@ -193,6 +196,8 @@ MonoBehaviour:
 
     Herman
     Chan
+
+    Sirius Li
 
     Benedict Wong
 
@@ -247,7 +252,7 @@ MonoBehaviour:
 
 
 
-    Character Design, Sprites and Backgrounds:
+    Character Design, Sprites:
 
     Alen
     Pontejos
@@ -256,7 +261,17 @@ MonoBehaviour:
 
 
 
-    Gameplay Design:
+    Backgrounds:
+
+    Sirius Li
+
+    Alen Pontejos
+
+
+
+
+    Gameplay
+    Design:
 
     Herman Chan
 
@@ -266,10 +281,10 @@ MonoBehaviour:
 
 
 
-    Music
-    and SFX:
+    Music and SFX:
 
-    Jonathan Newman
+    Jonathan
+    Newman
 
 
 
@@ -290,7 +305,6 @@ MonoBehaviour:
 
 
 
-
     Motivational
     Support:
 
@@ -308,7 +322,6 @@ MonoBehaviour:
 
 
     THANKS FOR PLAYING
-
 
 '
   m_isRightToLeft: 0
@@ -374,7 +387,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: -3601.4465, z: 2.5809937, w: -1294.5918}
+  m_margin: {x: 0, y: -5152.4834, z: 2.5809937, w: -147.29395}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -764,7 +777,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.1
-  time: 60000
+  timer: 72
 --- !u!1 &2026718817
 GameObject:
   m_ObjectHideFlags: 0

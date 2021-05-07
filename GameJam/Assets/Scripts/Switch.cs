@@ -6,7 +6,7 @@ public class Switch : MonoBehaviour
 {
     private GameObject player;
     private bool inRange = false;
-    public bool state = false;
+    //First time toggle
     private bool toggled = false;
     
 	private float intervalTimeInMilliseconds = 500f;
@@ -22,6 +22,7 @@ public class Switch : MonoBehaviour
         if(other == player.GetComponent<Collider2D>()) {
 	        if (Time.time > toggleTime) {
 		        inRange = true;
+                //Delay time
 		        toggleTime = Time.time + intervalTimeInMilliseconds / 1000;
 	        }
             
@@ -35,16 +36,9 @@ public class Switch : MonoBehaviour
         }
     }
     void Update(){
-        //bool enterIsPressed = Input.GetButtonDown("Submit");
-        if(inRange && toggled == false){
-            if(state){
-                //objectToChange.GetComponent<SpriteRenderer>().enabled=false;
-                state = false;
-            }
-            else{
-                //objectToChange.GetComponent<SpriteRenderer>().enabled=true;
-                state = true;
-            }
+        if(inRange && !toggled){
+            //GameManager set state
+            FindObjectOfType<GameManager>().setState();
             toggled = true;
         }
     }
