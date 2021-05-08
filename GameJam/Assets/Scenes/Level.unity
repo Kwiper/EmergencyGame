@@ -13479,7 +13479,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 825dff146228631439a69bc2d20b4e17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  oxygen: 10000
+  oxygen: 7000
   maxOxygen: 0
   oxygenCheckPointMin: 500
   oxygenLastCheck: 0
@@ -13488,7 +13488,7 @@ MonoBehaviour:
   wallHopSubtractTime: 1.3
   moveSubtractTime: 1.5
   hitByEnemySubtractTime: 1000
-  oxygenRegenPickupTime: 25
+  oxygenRegenPickupTime: 150
   oxygenRegenCheckpointTime: 50
   oxygenCountdownToggle: 1
   oxygenBar: {fileID: 629241066}
