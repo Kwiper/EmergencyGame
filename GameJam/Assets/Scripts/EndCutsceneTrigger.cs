@@ -7,11 +7,15 @@ public class EndCutsceneTrigger : MonoBehaviour
     private bool hasTriggered = false;
     private float timer = 10;
 
+    public SpriteRenderer sprite;
+    private float alpha = 0f;
+
     public AudioSource ending;
 
     private void Start()
     {
         ending = GetComponent<AudioSource>();
+        sprite.color = new Color(1, 1, 1, alpha);
     }
 
     void Awake() {
@@ -28,11 +32,19 @@ public class EndCutsceneTrigger : MonoBehaviour
     {
         if (hasTriggered) {
             timer -= Time.deltaTime;
+
+            if (alpha < 1)
+            {
+                alpha += 0.1f * Time.deltaTime;
+            }
+            sprite.color = new Color(1, 1, 1, alpha);
+            Debug.Log(alpha);
         }
 
         if (timer <= 0) {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
+
     }
 
     // Start is called before the first frame update
