@@ -11,6 +11,7 @@ public class EndCutsceneTrigger : MonoBehaviour
     private float alpha = 0f;
 
     public AudioSource ending;
+    private float maxVolume;
 
     private void Start()
     {
@@ -20,16 +21,18 @@ public class EndCutsceneTrigger : MonoBehaviour
 
     void Awake() {
 	    if (PlayerPrefs.HasKey("maxVolume")) {
-		    ending.volume = PlayerPrefs.GetFloat("maxVolume");
+		    maxVolume = PlayerPrefs.GetFloat("maxVolume");
 	    }
 	    else {
-		    ending.volume = 0.35f;
+		    maxVolume = 0.35f;
 	    }
 
     }
 
-    private void Update()
-    {
+    private void Update() {
+	    ending.volume = maxVolume;
+	    
+	    
         if (hasTriggered) {
             timer -= Time.deltaTime;
 
