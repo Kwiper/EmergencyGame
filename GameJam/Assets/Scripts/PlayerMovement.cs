@@ -91,12 +91,20 @@ public class PlayerMovement : MonoBehaviour
 	    Debug.Log(playerAudio.isPlaying);
         if (isAlive)
         {
+	        if (rb.velocity.x == 0 && rb.velocity.y == 0) {
+		        FindObjectOfType<OyxgenManager>().passiveDeplete();
+	        }
+	        
             CheckInput();
             CheckMovementDirection();
             CheckIfCanJump();
             CheckIfWallSliding();
             Animate();
             PlayAudio();
+            if (rb.velocity.y < 0) {
+	            FindObjectOfType<OyxgenManager>().fallDeplete();
+            }
+            
 //            Debug.Log(facingDirection);
 //            Debug.Log(movementInputDirection);
 
@@ -126,6 +134,7 @@ public class PlayerMovement : MonoBehaviour
         if (isTouchingWall && !isGrounded && rb.velocity.y < 0)
         {
             isWallSliding = true;
+            
         }
         else
         {
@@ -176,6 +185,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             Jump();
+            FindObjectOfType<OyxgenManager>().jumpDeplete();
         }
 
         if (Input.GetButtonUp("Jump"))
@@ -192,7 +202,7 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             isJumping = true;
-            FindObjectOfType<OyxgenManager>().jumpDeplete();
+            
             FindObjectOfType<TestCamera>().setJump();
             coyoteCount = 0;
         }
@@ -227,12 +237,12 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector2(movementSpeed * movementInputDirection, rb.velocity.y);
             coyoteCount = coyoteTime;
             isJumping = false;
-            FindObjectOfType<OyxgenManager>().moveDeplete();
+
         }
         //For Coyote Time Movement
         if (!isGrounded && !isJumping && !isWallSliding) {
             coyoteCount -= Time.deltaTime;
-            FindObjectOfType<OyxgenManager>().moveDeplete();
+
         }
 
         if (!isGrounded && !isWallSliding && movementInputDirection != 0) {
@@ -288,6 +298,7 @@ public class PlayerMovement : MonoBehaviour
     private void Animate() {
 	    if(movementInputDirection != 0 && !isWallSliding) {
 		    player_anim.SetBool("isMoving", true);
+		    FindObjectOfType<OyxgenManager>().moveDeplete();
 		    
 	    }
 	    else {
@@ -297,6 +308,8 @@ public class PlayerMovement : MonoBehaviour
         if (isWallSliding && !isGrounded)
         {
 	        player_anim.SetBool("isWallSliding", true);
+	        FindObjectOfType<OyxgenManager>().slideDeplete();
+	        
         }
         else
         {
@@ -318,6 +331,7 @@ public class PlayerMovement : MonoBehaviour
         {
 	        
             player_anim.SetBool("isJumping", true);
+            
         }
         else {
 	        

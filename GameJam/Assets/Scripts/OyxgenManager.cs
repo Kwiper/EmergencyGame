@@ -26,6 +26,13 @@ public class OyxgenManager : MonoBehaviour {
 	// modify this to change the amount of oxygen you lose during movement
 	public float moveSubtractTime = 1.5f;
 	
+	// modify this to change the amount of oxygen you lose during sliding
+	public float slideSubtractTime = 1.5f;
+	
+	// modify this to change the amount of oxygen you lose by falling
+	public float fallSubtractTime = 0.75f;
+	
+	
 	// modify this to change the amount of oxygen you lose by getting hit
 	public float hitByEnemySubtractTime = 100;
 	
@@ -53,6 +60,10 @@ public class OyxgenManager : MonoBehaviour {
 	    float currentPercentage = (oxygen / maxOxygen) * 100;
 	    string currentPercentageString = currentPercentage.ToString("F1");
 	    percentageText.text = currentPercentageString + "%";
+
+	    if (oxygen > maxOxygen) {
+		    oxygen = maxOxygen;
+	    }
 	    
 	    
 	    if (oxygen <= 0) {
@@ -68,7 +79,9 @@ public class OyxgenManager : MonoBehaviour {
 	    }
     }
 
-    private void FixedUpdate() {
+    
+
+    public void passiveDeplete() {
 	    if(oxygenCountdownToggle) oxygen -= Time.deltaTime * passiveSubtractTime;
     }
 
@@ -82,11 +95,19 @@ public class OyxgenManager : MonoBehaviour {
     }
 
     public void moveDeplete() {
-		if(oxygenCountdownToggle) oxygen -= moveSubtractTime;
+		if(oxygenCountdownToggle) oxygen -= Time.deltaTime * moveSubtractTime;
+    }
+
+    public void fallDeplete() {
+	    if(oxygenCountdownToggle) oxygen -= Time.deltaTime * fallSubtractTime;
     }
 
     public void oxygenRegenPickup() {
 	    oxygen += oxygenRegenPickupTime;
+    }
+
+    public void slideDeplete() {
+	    if(oxygenCountdownToggle) oxygen -= Time.deltaTime * slideSubtractTime;
     }
 
     public void oxygenRegenCheckpoint() {
