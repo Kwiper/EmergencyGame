@@ -219,6 +219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   oxygen: 10000
+  maxOxygen: 0
   oxygenCheckPointMin: 500
   oxygenLastCheck: 0
   passiveSubtractTime: 1
@@ -230,6 +231,7 @@ MonoBehaviour:
   oxygenRegenCheckpointTime: 50
   oxygenCountdownToggle: 0
   oxygenBar: {fileID: 0}
+  percentageText: {fileID: 0}
 --- !u!114 &361097429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -243,7 +245,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 387348782}
+  typingSpeed: 0
   textTimer: 1000
+  textCount: 0
   text:
   - EMERGENCY. EMERGENCY.
   - THERE IS AN EMERGENCY IN SECTION C.
@@ -2181,7 +2185,7 @@ PrefabInstance:
     - target: {fileID: 6476770226528452522, guid: 0782a8c964421e44d93842d889c06d27,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.28
+      value: -2.05
       objectReference: {fileID: 0}
     - target: {fileID: 6476770226528452522, guid: 0782a8c964421e44d93842d889c06d27,
         type: 3}
