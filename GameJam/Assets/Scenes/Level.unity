@@ -5311,6 +5311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce0df9e774f55c44bba54c0256601816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  overrideMaxVolume: 0
 --- !u!212 &207222455
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5753,6 +5754,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce0df9e774f55c44bba54c0256601816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  overrideMaxVolume: 0
 --- !u!212 &296976783
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7455,6 +7457,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce0df9e774f55c44bba54c0256601816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  overrideMaxVolume: 0
 --- !u!212 &451848518
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8983,12 +8986,12 @@ PrefabInstance:
     - target: {fileID: 2188762851187787628, guid: 2a481881e4be2aa43937f21d10be4435,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 331.5
+      value: -2.46
       objectReference: {fileID: 0}
     - target: {fileID: 2188762851187787628, guid: 2a481881e4be2aa43937f21d10be4435,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 28.5
+      value: -3.713
       objectReference: {fileID: 0}
     - target: {fileID: 2188762851187787628, guid: 2a481881e4be2aa43937f21d10be4435,
         type: 3}
@@ -10944,12 +10947,12 @@ PrefabInstance:
     - target: {fileID: 6476770226528452522, guid: 0782a8c964421e44d93842d889c06d27,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 331.5
+      value: -2.46
       objectReference: {fileID: 0}
     - target: {fileID: 6476770226528452522, guid: 0782a8c964421e44d93842d889c06d27,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 28.5
+      value: -3.713
       objectReference: {fileID: 0}
     - target: {fileID: 6476770226528452522, guid: 0782a8c964421e44d93842d889c06d27,
         type: 3}
@@ -19282,6 +19285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce0df9e774f55c44bba54c0256601816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  overrideMaxVolume: 0
 --- !u!212 &1158193228
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -19392,6 +19396,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce0df9e774f55c44bba54c0256601816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  overrideMaxVolume: 0
 --- !u!212 &1184545414
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -61941,7 +61946,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1527734492}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 331.54794, y: 32.058136, z: -10}
+  m_LocalPosition: {x: 4.52981, y: 2.1915286, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
