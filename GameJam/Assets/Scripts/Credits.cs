@@ -19,7 +19,9 @@ public class Credits : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if(Input.GetButton("Jump")){
+            SceneManager.LoadScene(0);
+        }
     }
 
     void FixedUpdate(){

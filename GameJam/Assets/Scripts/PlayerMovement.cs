@@ -88,7 +88,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update() {
 	    playerAudio.volume = maxVolume;
-	    Debug.Log(playerAudio.isPlaying);
+	    //Debug.Log(playerAudio.isPlaying);
         if (isAlive)
         {
             CheckInput();
@@ -203,6 +203,7 @@ public class PlayerMovement : MonoBehaviour
             rb.AddForce(forceToAdd, ForceMode2D.Impulse);
             isJumping = true;
             FindObjectOfType<OyxgenManager>().wallHopDeplete();
+            Debug.Log("Wall hop");
         }
         else if ((isWallSliding || isTouchingWall) && movementInputDirection != 0 && canJump) // Wall jump
         {
@@ -214,6 +215,7 @@ public class PlayerMovement : MonoBehaviour
                 rb.AddForce(forceToAdd, ForceMode2D.Impulse);
                 isJumping = true;
                 FindObjectOfType<OyxgenManager>().jumpDeplete();
+                Debug.Log("Jump Deplete");
             }
         }
     }

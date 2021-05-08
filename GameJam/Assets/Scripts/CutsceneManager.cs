@@ -29,5 +29,8 @@ public class CutsceneManager : MonoBehaviour
         if (!audio.isPlaying) {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
+        if(Input.GetButton("Jump")){
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
     }
 }
