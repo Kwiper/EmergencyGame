@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 
+    // Never underestimate the challenge of making good player movement.
+
     public bool isAlive = true;
 
     private float movementInputDirection;
