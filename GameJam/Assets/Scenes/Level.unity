@@ -4988,6 +4988,7 @@ MonoBehaviour:
   onBase: {fileID: 0}
   offBase: {fileID: 0}
   turretBaseObject: {fileID: 0}
+  shootSound: {fileID: 0}
 --- !u!212 &176981932
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6478,6 +6479,7 @@ MonoBehaviour:
   onBase: {fileID: 0}
   offBase: {fileID: 0}
   turretBaseObject: {fileID: 0}
+  shootSound: {fileID: 0}
 --- !u!212 &305531156
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6984,6 +6986,7 @@ MonoBehaviour:
   onBase: {fileID: 0}
   offBase: {fileID: 0}
   turretBaseObject: {fileID: 0}
+  shootSound: {fileID: 0}
 --- !u!212 &402321578
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7545,6 +7548,7 @@ MonoBehaviour:
   onBase: {fileID: 0}
   offBase: {fileID: 0}
   turretBaseObject: {fileID: 0}
+  shootSound: {fileID: 0}
 --- !u!212 &445124102
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7689,6 +7693,7 @@ MonoBehaviour:
   onBase: {fileID: 0}
   offBase: {fileID: 0}
   turretBaseObject: {fileID: 0}
+  shootSound: {fileID: 0}
 --- !u!212 &450847175
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11488,6 +11493,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6476770226528452521, guid: 0782a8c964421e44d93842d889c06d27,
         type: 3}
+      propertyPath: hit
+      value: 
+      objectReference: {fileID: 8300000, guid: a6bfe859f620caf459bb626c3abd54a8, type: 3}
+    - target: {fileID: 6476770226528452521, guid: 0782a8c964421e44d93842d889c06d27,
+        type: 3}
+      propertyPath: jump
+      value: 
+      objectReference: {fileID: 8300000, guid: a9d7da5a17e30f44a857f9fa06635278, type: 3}
+    - target: {fileID: 6476770226528452521, guid: 0782a8c964421e44d93842d889c06d27,
+        type: 3}
+      propertyPath: silence
+      value: 
+      objectReference: {fileID: 8300000, guid: 397d4121d7d4dd1438d2e660432e5ed4, type: 3}
+    - target: {fileID: 6476770226528452521, guid: 0782a8c964421e44d93842d889c06d27,
+        type: 3}
+      propertyPath: walking
+      value: 
+      objectReference: {fileID: 8300000, guid: 74249faf0bf9dd54b954882694068761, type: 3}
+    - target: {fileID: 6476770226528452521, guid: 0782a8c964421e44d93842d889c06d27,
+        type: 3}
+      propertyPath: walljump
+      value: 
+      objectReference: {fileID: 8300000, guid: 0723981889e678540a4528e98f3e1784, type: 3}
+    - target: {fileID: 6476770226528452521, guid: 0782a8c964421e44d93842d889c06d27,
+        type: 3}
       propertyPath: wallJumpForce
       value: 35
       objectReference: {fileID: 0}
@@ -11935,6 +11965,7 @@ MonoBehaviour:
   onBase: {fileID: 0}
   offBase: {fileID: 0}
   turretBaseObject: {fileID: 0}
+  shootSound: {fileID: 0}
 --- !u!212 &730797112
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13725,6 +13756,7 @@ MonoBehaviour:
   onBase: {fileID: 0}
   offBase: {fileID: 0}
   turretBaseObject: {fileID: 0}
+  shootSound: {fileID: 0}
 --- !u!212 &891462721
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14245,6 +14277,7 @@ MonoBehaviour:
   onBase: {fileID: 0}
   offBase: {fileID: 0}
   turretBaseObject: {fileID: 0}
+  shootSound: {fileID: 0}
 --- !u!212 &913295388
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14926,11 +14959,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
+  m_audioClip: {fileID: 8300000, guid: 397d4121d7d4dd1438d2e660432e5ed4, type: 3}
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -15342,6 +15375,7 @@ MonoBehaviour:
   onBase: {fileID: 0}
   offBase: {fileID: 0}
   turretBaseObject: {fileID: 0}
+  shootSound: {fileID: 0}
 --- !u!212 &1046905865
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15486,6 +15520,7 @@ MonoBehaviour:
   onBase: {fileID: 0}
   offBase: {fileID: 0}
   turretBaseObject: {fileID: 0}
+  shootSound: {fileID: 0}
 --- !u!212 &1049399621
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16208,6 +16243,7 @@ MonoBehaviour:
   onBase: {fileID: 0}
   offBase: {fileID: 0}
   turretBaseObject: {fileID: 0}
+  shootSound: {fileID: 0}
 --- !u!212 &1086368083
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20007,6 +20043,7 @@ MonoBehaviour:
   onBase: {fileID: 0}
   offBase: {fileID: 0}
   turretBaseObject: {fileID: 0}
+  shootSound: {fileID: 0}
 --- !u!212 &1148328583
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20674,6 +20711,7 @@ MonoBehaviour:
   onBase: {fileID: 0}
   offBase: {fileID: 0}
   turretBaseObject: {fileID: 0}
+  shootSound: {fileID: 0}
 --- !u!212 &1194602926
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -21009,6 +21047,7 @@ MonoBehaviour:
   onBase: {fileID: 0}
   offBase: {fileID: 0}
   turretBaseObject: {fileID: 0}
+  shootSound: {fileID: 0}
 --- !u!212 &1208082617
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -21532,6 +21571,7 @@ MonoBehaviour:
   onBase: {fileID: 0}
   offBase: {fileID: 0}
   turretBaseObject: {fileID: 0}
+  shootSound: {fileID: 0}
 --- !u!212 &1253591023
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -22596,6 +22636,7 @@ MonoBehaviour:
   onBase: {fileID: 0}
   offBase: {fileID: 0}
   turretBaseObject: {fileID: 0}
+  shootSound: {fileID: 0}
 --- !u!212 &1334349286
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -23458,6 +23499,7 @@ MonoBehaviour:
   onBase: {fileID: 0}
   offBase: {fileID: 0}
   turretBaseObject: {fileID: 0}
+  shootSound: {fileID: 0}
 --- !u!212 &1410889335
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -23712,6 +23754,7 @@ MonoBehaviour:
   onBase: {fileID: 0}
   offBase: {fileID: 0}
   turretBaseObject: {fileID: 0}
+  shootSound: {fileID: 0}
 --- !u!212 &1429143891
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -23931,6 +23974,7 @@ MonoBehaviour:
   onBase: {fileID: 0}
   offBase: {fileID: 0}
   turretBaseObject: {fileID: 0}
+  shootSound: {fileID: 0}
 --- !u!212 &1446846225
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -64859,6 +64903,7 @@ MonoBehaviour:
   onBase: {fileID: 0}
   offBase: {fileID: 0}
   turretBaseObject: {fileID: 0}
+  shootSound: {fileID: 0}
 --- !u!212 &1530044984
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -65549,6 +65594,7 @@ MonoBehaviour:
   onBase: {fileID: 0}
   offBase: {fileID: 0}
   turretBaseObject: {fileID: 0}
+  shootSound: {fileID: 0}
 --- !u!50 &1621901663
 Rigidbody2D:
   serializedVersion: 4
@@ -68112,6 +68158,7 @@ MonoBehaviour:
   onBase: {fileID: 0}
   offBase: {fileID: 0}
   turretBaseObject: {fileID: 0}
+  shootSound: {fileID: 0}
 --- !u!212 &1850147490
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -69640,95 +69687,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63134ae51df7e68419c3827923688e97, type: 3}
---- !u!1001 &2047438849
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1755494588912720381, guid: de1de1ffc3dcd0a45bf5a720fa0fabaf,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 421.86
-      objectReference: {fileID: 0}
-    - target: {fileID: 1755494588912720381, guid: de1de1ffc3dcd0a45bf5a720fa0fabaf,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 40.64
-      objectReference: {fileID: 0}
-    - target: {fileID: 1755494589966836140, guid: de1de1ffc3dcd0a45bf5a720fa0fabaf,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 129.78
-      objectReference: {fileID: 0}
-    - target: {fileID: 1755494589966836140, guid: de1de1ffc3dcd0a45bf5a720fa0fabaf,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -7.2351127
-      objectReference: {fileID: 0}
-    - target: {fileID: 8793261041808427077, guid: de1de1ffc3dcd0a45bf5a720fa0fabaf,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 22
-      objectReference: {fileID: 0}
-    - target: {fileID: 8793261041808427077, guid: de1de1ffc3dcd0a45bf5a720fa0fabaf,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 54.6791
-      objectReference: {fileID: 0}
-    - target: {fileID: 8793261041808427077, guid: de1de1ffc3dcd0a45bf5a720fa0fabaf,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 6.807487
-      objectReference: {fileID: 0}
-    - target: {fileID: 8793261041808427077, guid: de1de1ffc3dcd0a45bf5a720fa0fabaf,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -3135.0945
-      objectReference: {fileID: 0}
-    - target: {fileID: 8793261041808427077, guid: de1de1ffc3dcd0a45bf5a720fa0fabaf,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8793261041808427077, guid: de1de1ffc3dcd0a45bf5a720fa0fabaf,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8793261041808427077, guid: de1de1ffc3dcd0a45bf5a720fa0fabaf,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8793261041808427077, guid: de1de1ffc3dcd0a45bf5a720fa0fabaf,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8793261041808427077, guid: de1de1ffc3dcd0a45bf5a720fa0fabaf,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8793261041808427077, guid: de1de1ffc3dcd0a45bf5a720fa0fabaf,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8793261041808427077, guid: de1de1ffc3dcd0a45bf5a720fa0fabaf,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8793261041808427098, guid: de1de1ffc3dcd0a45bf5a720fa0fabaf,
-        type: 3}
-      propertyPath: m_Name
-      value: Roy Switches (1)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: de1de1ffc3dcd0a45bf5a720fa0fabaf, type: 3}
 --- !u!1001 &2060030905
 PrefabInstance:
   m_ObjectHideFlags: 0
