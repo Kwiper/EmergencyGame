@@ -4364,6 +4364,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1694981226}
     m_Modifications:
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 5.7502947
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 3.256594
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.82244396
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 1.6397892
+      objectReference: {fileID: 0}
     - target: {fileID: 8120332059848881146, guid: 223558891988e284bb214dd2833b5448,
         type: 3}
       propertyPath: m_Name
@@ -4433,6 +4453,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1694981226}
     m_Modifications:
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 8.814039
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 3.3443155
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.26864815
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 1.68365
+      objectReference: {fileID: 0}
     - target: {fileID: 8120332059848881146, guid: 223558891988e284bb214dd2833b5448,
         type: 3}
       propertyPath: m_Name
@@ -4765,6 +4805,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8120332060810255654, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 223558891988e284bb214dd2833b5448, type: 3}
 --- !u!1 &176981927
@@ -4859,6 +4904,7 @@ MonoBehaviour:
   onBase: {fileID: 0}
   offBase: {fileID: 0}
   turretBaseObject: {fileID: 0}
+  gunHead: {fileID: 0}
   shootSound: {fileID: 0}
 --- !u!212 &176981932
 SpriteRenderer:
@@ -5398,6 +5444,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1694981226}
     m_Modifications:
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 2.1624007
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.8500271
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 2.0820668
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.20051074
+      objectReference: {fileID: 0}
     - target: {fileID: 8120332059848881146, guid: 223558891988e284bb214dd2833b5448,
         type: 3}
       propertyPath: m_Name
@@ -5467,6 +5533,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1694981226}
     m_Modifications:
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 9.314692
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 4.2000475
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.4663477
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 2.111516
+      objectReference: {fileID: 0}
     - target: {fileID: 8120332059848881146, guid: 223558891988e284bb214dd2833b5448,
         type: 3}
       propertyPath: m_Name
@@ -5662,6 +5748,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1694981226}
     m_Modifications:
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 5.3713446
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 4.6908684
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 1.2221904
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 2.3569264
+      objectReference: {fileID: 0}
     - target: {fileID: 8120332059848881146, guid: 223558891988e284bb214dd2833b5448,
         type: 3}
       propertyPath: m_Name
@@ -6425,6 +6531,7 @@ MonoBehaviour:
   onBase: {fileID: 0}
   offBase: {fileID: 0}
   turretBaseObject: {fileID: 0}
+  gunHead: {fileID: 0}
   shootSound: {fileID: 0}
 --- !u!212 &305531156
 SpriteRenderer:
@@ -6932,6 +7039,7 @@ MonoBehaviour:
   onBase: {fileID: 0}
   offBase: {fileID: 0}
   turretBaseObject: {fileID: 0}
+  gunHead: {fileID: 0}
   shootSound: {fileID: 0}
 --- !u!212 &402321578
 SpriteRenderer:
@@ -7499,6 +7607,7 @@ MonoBehaviour:
   onBase: {fileID: 0}
   offBase: {fileID: 0}
   turretBaseObject: {fileID: 0}
+  gunHead: {fileID: 0}
   shootSound: {fileID: 0}
 --- !u!212 &445124102
 SpriteRenderer:
@@ -7644,6 +7753,7 @@ MonoBehaviour:
   onBase: {fileID: 0}
   offBase: {fileID: 0}
   turretBaseObject: {fileID: 0}
+  gunHead: {fileID: 0}
   shootSound: {fileID: 0}
 --- !u!212 &450847175
 SpriteRenderer:
@@ -7925,6 +8035,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1694981226}
     m_Modifications:
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 5.124914
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 2.7141502
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.7889267
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 1.3685671
+      objectReference: {fileID: 0}
     - target: {fileID: 8120332059848881146, guid: 223558891988e284bb214dd2833b5448,
         type: 3}
       propertyPath: m_Name
@@ -8195,6 +8325,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1694981226}
     m_Modifications:
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 3.8681889
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 3.7636461
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.05509764
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 1.8933148
+      objectReference: {fileID: 0}
     - target: {fileID: 8120332059848881146, guid: 223558891988e284bb214dd2833b5448,
         type: 3}
       propertyPath: m_Name
@@ -8665,6 +8815,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1694981226}
     m_Modifications:
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 7.340687
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 4.327577
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.502028
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 2.1752808
+      objectReference: {fileID: 0}
     - target: {fileID: 8120332059848881146, guid: 223558891988e284bb214dd2833b5448,
         type: 3}
       propertyPath: m_Name
@@ -8829,6 +8999,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1694981226}
     m_Modifications:
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 2.348545
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 2.96786
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.030332386
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 1.4954222
+      objectReference: {fileID: 0}
     - target: {fileID: 8120332059848881146, guid: 223558891988e284bb214dd2833b5448,
         type: 3}
       propertyPath: m_Name
@@ -11820,6 +12010,7 @@ MonoBehaviour:
   onBase: {fileID: 0}
   offBase: {fileID: 0}
   turretBaseObject: {fileID: 0}
+  gunHead: {fileID: 0}
   shootSound: {fileID: 0}
 --- !u!212 &730797112
 SpriteRenderer:
@@ -12023,6 +12214,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1694981226}
     m_Modifications:
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 8.547306
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 5.167998
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.36004066
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 2.5954912
+      objectReference: {fileID: 0}
     - target: {fileID: 8120332059848881146, guid: 223558891988e284bb214dd2833b5448,
         type: 3}
       propertyPath: m_Name
@@ -12559,6 +12770,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1694981226}
     m_Modifications:
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 6.961404
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 2.9665558
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.60242784
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 1.3162626
+      objectReference: {fileID: 0}
     - target: {fileID: 8120332059848881146, guid: 223558891988e284bb214dd2833b5448,
         type: 3}
       propertyPath: m_Name
@@ -13104,6 +13335,38 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1295092780}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &830985330 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8120332060435211601, guid: 223558891988e284bb214dd2833b5448,
+    type: 3}
+  m_PrefabInstance: {fileID: 174182185}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &830985334
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 830985330}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.38614357, y: 1.5118983}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.8925, y: 0.38375}
+    newSize: {x: 7.14, y: 3.07}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.8865874, y: 2.9917006}
+  m_EdgeRadius: 0
 --- !u!1 &831671253
 GameObject:
   m_ObjectHideFlags: 0
@@ -13313,6 +13576,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1694981226}
     m_Modifications:
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 6.852782
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 4.7084126
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.7750695
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 2.365698
+      objectReference: {fileID: 0}
     - target: {fileID: 8120332059848881146, guid: 223558891988e284bb214dd2833b5448,
         type: 3}
       propertyPath: m_Name
@@ -13613,6 +13896,7 @@ MonoBehaviour:
   onBase: {fileID: 0}
   offBase: {fileID: 0}
   turretBaseObject: {fileID: 0}
+  gunHead: {fileID: 0}
   shootSound: {fileID: 0}
 --- !u!212 &891462721
 SpriteRenderer:
@@ -13850,6 +14134,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1694981226}
     m_Modifications:
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 6.33785
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 2.2363937
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.11602855
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 1.1296891
+      objectReference: {fileID: 0}
     - target: {fileID: 8120332059848881146, guid: 223558891988e284bb214dd2833b5448,
         type: 3}
       propertyPath: m_Name
@@ -14114,6 +14418,7 @@ MonoBehaviour:
   onBase: {fileID: 0}
   offBase: {fileID: 0}
   turretBaseObject: {fileID: 0}
+  gunHead: {fileID: 0}
   shootSound: {fileID: 0}
 --- !u!212 &913295388
 SpriteRenderer:
@@ -14339,6 +14644,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1694981226}
     m_Modifications:
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 7.202144
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 3.6612086
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -1.0056651
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 1.8420966
+      objectReference: {fileID: 0}
     - target: {fileID: 8120332059848881146, guid: 223558891988e284bb214dd2833b5448,
         type: 3}
       propertyPath: m_Name
@@ -15218,6 +15543,7 @@ MonoBehaviour:
   onBase: {fileID: 0}
   offBase: {fileID: 0}
   turretBaseObject: {fileID: 0}
+  gunHead: {fileID: 0}
   shootSound: {fileID: 0}
 --- !u!212 &1046905865
 SpriteRenderer:
@@ -15363,6 +15689,7 @@ MonoBehaviour:
   onBase: {fileID: 0}
   offBase: {fileID: 0}
   turretBaseObject: {fileID: 0}
+  gunHead: {fileID: 0}
   shootSound: {fileID: 0}
 --- !u!212 &1049399621
 SpriteRenderer:
@@ -16074,6 +16401,7 @@ MonoBehaviour:
   onBase: {fileID: 0}
   offBase: {fileID: 0}
   turretBaseObject: {fileID: 0}
+  gunHead: {fileID: 0}
   shootSound: {fileID: 0}
 --- !u!212 &1086368083
 SpriteRenderer:
@@ -20122,6 +20450,7 @@ MonoBehaviour:
   onBase: {fileID: 0}
   offBase: {fileID: 0}
   turretBaseObject: {fileID: 0}
+  gunHead: {fileID: 0}
   shootSound: {fileID: 0}
 --- !u!212 &1148328583
 SpriteRenderer:
@@ -20415,6 +20744,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1694981226}
     m_Modifications:
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 7.2947445
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 3.7140567
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 1.8685206
+      objectReference: {fileID: 0}
     - target: {fileID: 8120332059848881146, guid: 223558891988e284bb214dd2833b5448,
         type: 3}
       propertyPath: m_Name
@@ -20790,6 +21139,7 @@ MonoBehaviour:
   onBase: {fileID: 0}
   offBase: {fileID: 0}
   turretBaseObject: {fileID: 0}
+  gunHead: {fileID: 0}
   shootSound: {fileID: 0}
 --- !u!212 &1194602926
 SpriteRenderer:
@@ -20850,6 +21200,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1694981226}
     m_Modifications:
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 6.856214
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 5.182405
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.43409038
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 2.6026947
+      objectReference: {fileID: 0}
     - target: {fileID: 8120332059848881146, guid: 223558891988e284bb214dd2833b5448,
         type: 3}
       propertyPath: m_Name
@@ -21126,6 +21496,7 @@ MonoBehaviour:
   onBase: {fileID: 0}
   offBase: {fileID: 0}
   turretBaseObject: {fileID: 0}
+  gunHead: {fileID: 0}
   shootSound: {fileID: 0}
 --- !u!212 &1208082617
 SpriteRenderer:
@@ -21275,6 +21646,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1694981226}
     m_Modifications:
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 5.386571
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 5.6625586
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -1.2298126
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 2.8427715
+      objectReference: {fileID: 0}
     - target: {fileID: 8120332059848881146, guid: 223558891988e284bb214dd2833b5448,
         type: 3}
       propertyPath: m_Name
@@ -21490,6 +21881,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1694981226}
     m_Modifications:
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 6.5533214
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 2.7519505
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.47462392
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 1.3874675
+      objectReference: {fileID: 0}
     - target: {fileID: 8120332059848881146, guid: 223558891988e284bb214dd2833b5448,
         type: 3}
       propertyPath: m_Name
@@ -21650,6 +22061,7 @@ MonoBehaviour:
   onBase: {fileID: 0}
   offBase: {fileID: 0}
   turretBaseObject: {fileID: 0}
+  gunHead: {fileID: 0}
   shootSound: {fileID: 0}
 --- !u!212 &1253591023
 SpriteRenderer:
@@ -22855,6 +23267,7 @@ MonoBehaviour:
   onBase: {fileID: 0}
   offBase: {fileID: 0}
   turretBaseObject: {fileID: 0}
+  gunHead: {fileID: 0}
   shootSound: {fileID: 0}
 --- !u!212 &1334349286
 SpriteRenderer:
@@ -23724,6 +24137,7 @@ MonoBehaviour:
   onBase: {fileID: 0}
   offBase: {fileID: 0}
   turretBaseObject: {fileID: 0}
+  gunHead: {fileID: 0}
   shootSound: {fileID: 0}
 --- !u!212 &1410889335
 SpriteRenderer:
@@ -23979,6 +24393,7 @@ MonoBehaviour:
   onBase: {fileID: 0}
   offBase: {fileID: 0}
   turretBaseObject: {fileID: 0}
+  gunHead: {fileID: 0}
   shootSound: {fileID: 0}
 --- !u!212 &1429143891
 SpriteRenderer:
@@ -24199,6 +24614,7 @@ MonoBehaviour:
   onBase: {fileID: 0}
   offBase: {fileID: 0}
   turretBaseObject: {fileID: 0}
+  gunHead: {fileID: 0}
   shootSound: {fileID: 0}
 --- !u!212 &1446846225
 SpriteRenderer:
@@ -24369,6 +24785,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1694981226}
     m_Modifications:
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 4.846339
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.7600344
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.2824074
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.89150935
+      objectReference: {fileID: 0}
     - target: {fileID: 8120332059848881146, guid: 223558891988e284bb214dd2833b5448,
         type: 3}
       propertyPath: m_Name
@@ -41585,7 +42021,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 24
-      m_TileSpriteIndex: 24
+      m_TileSpriteIndex: 48
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -52175,7 +52611,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 36
-      m_TileSpriteIndex: 36
+      m_TileSpriteIndex: 47
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -53225,7 +53661,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 41
-      m_TileSpriteIndex: 41
+      m_TileSpriteIndex: 46
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -53555,7 +53991,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 37
-      m_TileSpriteIndex: 37
+      m_TileSpriteIndex: 45
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -62312,9 +62748,8 @@ Tilemap:
   - m_RefCount: 33
     m_Data: {fileID: 4341566085777179861, guid: 7fb4a8185a1e7b34f962883e7121d3e6,
       type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -4186045500701553337, guid: 7fb4a8185a1e7b34f962883e7121d3e6,
-      type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 5
     m_Data: {fileID: 6194418895146555258, guid: 7fb4a8185a1e7b34f962883e7121d3e6,
       type: 3}
@@ -62346,12 +62781,10 @@ Tilemap:
   - m_RefCount: 2
     m_Data: {fileID: 4928450844346378050, guid: 7fb4a8185a1e7b34f962883e7121d3e6,
       type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 2369611209347510111, guid: 7fb4a8185a1e7b34f962883e7121d3e6,
-      type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -1680528802285091842, guid: 7fb4a8185a1e7b34f962883e7121d3e6,
-      type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 4
     m_Data: {fileID: -3207978946347155069, guid: 7fb4a8185a1e7b34f962883e7121d3e6,
       type: 3}
@@ -62361,8 +62794,8 @@ Tilemap:
   - m_RefCount: 18
     m_Data: {fileID: -4675527284210943235, guid: 7fb4a8185a1e7b34f962883e7121d3e6,
       type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 817627182150472343, guid: 7fb4a8185a1e7b34f962883e7121d3e6, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 48
     m_Data: {fileID: 3776778581137595035, guid: 7fb4a8185a1e7b34f962883e7121d3e6,
       type: 3}
@@ -62372,14 +62805,17 @@ Tilemap:
   - m_RefCount: 15
     m_Data: {fileID: 8252041107303726023, guid: 7fb4a8185a1e7b34f962883e7121d3e6,
       type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -1680528802285091842, guid: 7fb4a8185a1e7b34f962883e7121d3e6,
+      type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 817627182150472343, guid: 7fb4a8185a1e7b34f962883e7121d3e6, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 2369611209347510111, guid: 7fb4a8185a1e7b34f962883e7121d3e6,
+      type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: -4186045500701553337, guid: 7fb4a8185a1e7b34f962883e7121d3e6,
+      type: 3}
   m_TileMatrixArray:
   - m_RefCount: 3760
     m_Data:
@@ -66039,6 +66475,7 @@ MonoBehaviour:
   onBase: {fileID: 0}
   offBase: {fileID: 0}
   turretBaseObject: {fileID: 0}
+  gunHead: {fileID: 0}
   shootSound: {fileID: 0}
 --- !u!212 &1530044984
 SpriteRenderer:
@@ -66214,6 +66651,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1694981226}
     m_Modifications:
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 3.3979502
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 3.655442
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.009013891
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 1.8392133
+      objectReference: {fileID: 0}
     - target: {fileID: 8120332059848881146, guid: 223558891988e284bb214dd2833b5448,
         type: 3}
       propertyPath: m_Name
@@ -66641,6 +67098,7 @@ MonoBehaviour:
   onBase: {fileID: 0}
   offBase: {fileID: 0}
   turretBaseObject: {fileID: 0}
+  gunHead: {fileID: 0}
   shootSound: {fileID: 0}
 --- !u!50 &1621901663
 Rigidbody2D:
@@ -68347,6 +68805,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1694981226}
     m_Modifications:
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 6.558752
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 3.1852117
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.10326302
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 1.6040981
+      objectReference: {fileID: 0}
     - target: {fileID: 8120332059848881146, guid: 223558891988e284bb214dd2833b5448,
         type: 3}
       propertyPath: m_Name
@@ -69425,6 +69903,7 @@ MonoBehaviour:
   onBase: {fileID: 0}
   offBase: {fileID: 0}
   turretBaseObject: {fileID: 0}
+  gunHead: {fileID: 0}
   shootSound: {fileID: 0}
 --- !u!212 &1850147490
 SpriteRenderer:
@@ -70304,6 +70783,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1694981226}
     m_Modifications:
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 7.314922
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 4.4036517
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.4840691
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 2.213318
+      objectReference: {fileID: 0}
     - target: {fileID: 8120332059848881146, guid: 223558891988e284bb214dd2833b5448,
         type: 3}
       propertyPath: m_Name
@@ -70500,6 +70999,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1694981226}
     m_Modifications:
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 7.059866
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 5.174999
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.43607724
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 2.5989919
+      objectReference: {fileID: 0}
     - target: {fileID: 8120332059848881146, guid: 223558891988e284bb214dd2833b5448,
         type: 3}
       propertyPath: m_Name
@@ -70883,6 +71402,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1694981226}
     m_Modifications:
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 6.6097584
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 4.074507
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -1.0125966
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 2.0487454
+      objectReference: {fileID: 0}
     - target: {fileID: 8120332059848881146, guid: 223558891988e284bb214dd2833b5448,
         type: 3}
       propertyPath: m_Name
@@ -71325,6 +71864,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1694981226}
     m_Modifications:
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 4.8652554
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 3.201787
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -1.1983215
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902014339304538741, guid: 223558891988e284bb214dd2833b5448,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 1.6123855
+      objectReference: {fileID: 0}
     - target: {fileID: 8120332059848881146, guid: 223558891988e284bb214dd2833b5448,
         type: 3}
       propertyPath: m_Name

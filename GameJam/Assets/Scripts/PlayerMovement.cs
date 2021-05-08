@@ -87,7 +87,7 @@ public class PlayerMovement : MonoBehaviour
     
     // Update is called once per frame
     void Update() {
-	    playerAudio.volume = maxVolume;
+	    playerAudio.volume = 0.75f;
 	    //Debug.Log(playerAudio.isPlaying);
         if (isAlive)
         {
@@ -353,9 +353,10 @@ public class PlayerMovement : MonoBehaviour
 		    playerAudio.clip = silence;
 	    }
 
-//	    if (isJumping) {
-//		    playerAudio.PlayOneShot(jump);
-//	    }
+	    if (Input.GetButtonDown("Jump")&& isGrounded) {
+		    playerAudio.PlayOneShot(jump);
+	    }
+	    
     }
 
     public void SetLastPlayerPos(Vector2 position) {

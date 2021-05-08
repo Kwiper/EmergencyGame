@@ -20,8 +20,8 @@ public class BasicEnemyBehavior : MonoBehaviour {
 	private SpriteRenderer spriteRenderer;
 	public GameObject turretBaseObject;
 	private SpriteRenderer turretBase;
-	private Vector2 thisPos;
 	private float maxVolume;
+	public GameObject gunHead;
 
 	public AudioClip shootSound;
 
@@ -36,7 +36,6 @@ public class BasicEnemyBehavior : MonoBehaviour {
 		
 		spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
 		turretBase = turretBaseObject.GetComponent<SpriteRenderer>();
-		thisPos = transform.position;
 		turretSource = GetComponent<AudioSource>();
 	}
 
@@ -48,12 +47,12 @@ public class BasicEnemyBehavior : MonoBehaviour {
 			// rotate towards player
 			spriteRenderer.sprite = onSprite;
 			turretBase.sprite = onBase;
-			Vector3 targetDirection = playerPos - transform.position;
+			Vector3 targetDirection = playerPos - gunHead.transform.position;
 			float angle = (Mathf.Atan2(targetDirection.y, targetDirection.x) * Mathf.Rad2Deg) - 90;
 			Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 			
 //			Vector2 newDirection = Vector3.RotateTowards(transform.up, targetDirection, 15, 0.0f);
-			transform.rotation = Quaternion.Slerp(transform.rotation, rotation, 2.5f * Time.deltaTime);
+			gunHead.transform.rotation = Quaternion.Slerp(gunHead.transform.rotation, rotation, 3f * Time.deltaTime);
 			
 			// fire at player every "firerate" milliseconds
 			if(Time.time > shootTimer) {
