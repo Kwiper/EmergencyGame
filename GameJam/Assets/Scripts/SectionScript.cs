@@ -8,7 +8,7 @@ public class SectionScript : MonoBehaviour {
 	private AudioSource audio;
 
 	private float maxVolume;
-
+	public float overrideMaxVolume;
 	private bool triggeredEnter;
     // Start is called before the first frame update
     void Start() {
@@ -20,6 +20,9 @@ public class SectionScript : MonoBehaviour {
     void Awake() {
 	    if(PlayerPrefs.HasKey("maxVolume")){	
 		    maxVolume = PlayerPrefs.GetFloat("maxVolume");
+	    }
+	    else {
+		    maxVolume = overrideMaxVolume;
 	    }
     }
 

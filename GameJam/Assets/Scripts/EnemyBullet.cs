@@ -12,12 +12,12 @@ public class EnemyBullet : MonoBehaviour {
     // Start is called before the first frame update
     void Start() {
 	    player = GameObject.Find("Player");
+	    
         rb = GetComponent<Rigidbody2D>();
         moveDirection = (player.transform.position - transform.position).normalized * speed;
         rb.velocity = new Vector2(moveDirection.x, moveDirection.y);
         movingPlatform = GameObject.Find("PointB (10)");
-        Physics.IgnoreLayerCollision(10, 11);
-//        Destroy(gameObject, 5f);
+        Physics.IgnoreLayerCollision(10, 12);
     }
 
     // Update is called once per frame

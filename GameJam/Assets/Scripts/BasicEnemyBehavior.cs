@@ -6,37 +6,74 @@ using UnityEngine;
 
 public class BasicEnemyBehavior : MonoBehaviour {
 	
-	public GameObject player;
+	private Vector3 playerPos;
 	public GameObject bullet;
 	public float bulletSpeed = 1000f;
 	private bool isWithinTrigger;
 	public float fireRate = 2000f;
-	
+	public GameObject muzzle;
 	private float shootTimer;
+	public Sprite offSprite;
+	public Sprite onSprite;
+	public Sprite onBase;
+	public Sprite offBase;
+	private SpriteRenderer spriteRenderer;
+	public GameObject turretBaseObject;
+	private SpriteRenderer turretBase;
+	private Vector2 thisPos;
 	// Start is called before the first frame update
 	void Start()
 	{
-
+		
+		
+		var muzzleTransformPosition = muzzle.transform.position;
+		muzzleTransformPosition.z = 0;
+		
+		spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+		turretBase = turretBaseObject.GetComponent<SpriteRenderer>();
+		thisPos = transform.position;
 	}
 
 	// Update is called once per frame
 	void Update()
 	{
 		if (isWithinTrigger) {
+			// rotate towards player
+			spriteRenderer.sprite = onSprite;
+			turretBase.sprite = onBase;
+			Vector3 targetDirection = playerPos - transform.position;
+			float angle = (Mathf.Atan2(targetDirection.y, targetDirection.x) * Mathf.Rad2Deg) - 90;
+			Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+			
+//			Vector2 newDirection = Vector3.RotateTowards(transform.up, targetDirection, 15, 0.0f);
+			transform.rotation = Quaternion.Slerp(transform.rotation, rotation, 2.0f * Time.deltaTime);
+			
 			// fire at player every "firerate" milliseconds
 			if(Time.time > shootTimer) {
-				Instantiate(bullet, transform.position, transform.rotation);
 				shootTimer = Time.time + fireRate / 1000;
+				Instantiate(bullet,muzzle.transform.position,muzzle.transform.rotation);
+				
 			}
+		}
+		else {
+			spriteRenderer.sprite = offSprite;
+			turretBase.sprite = offBase;
 		}
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
 		// if the player has collided with the area of which the enemy operates at
 		if (other.CompareTag("Player")) {
-			Debug.Log("Collide");
-			isWithinTrigger = true;
 			
+			
+			
+		}
+	}
+
+	void OnTriggerStay2D(Collider2D other) {
+		if (other.CompareTag("Player")) {
+			isWithinTrigger = true;
+			playerPos = other.transform.position;
 		}
 	}
 
