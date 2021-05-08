@@ -10,6 +10,7 @@ TagManager:
   - Bullet
   - Elevator Points
   - Points
+  - Turret
   layers:
   - Default
   - TransparentFX
@@ -23,7 +24,7 @@ TagManager:
   - Camera Enclosure
   - Elevator Points
   - Bullet
-  - 
+  - Turrets
   - 
   - 
   - 
