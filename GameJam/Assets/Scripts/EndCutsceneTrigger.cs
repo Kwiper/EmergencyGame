@@ -18,6 +18,9 @@ public class EndCutsceneTrigger : MonoBehaviour
 	    if (PlayerPrefs.HasKey("maxVolume")) {
 		    ending.volume = PlayerPrefs.GetFloat("maxVolume");
 	    }
+	    else {
+		    ending.volume = 0.35f;
+	    }
 
     }
 

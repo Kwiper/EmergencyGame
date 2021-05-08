@@ -21,6 +21,11 @@ public class BasicEnemyBehavior : MonoBehaviour {
 	public GameObject turretBaseObject;
 	private SpriteRenderer turretBase;
 	private Vector2 thisPos;
+	private float maxVolume;
+
+	public AudioClip shootSound;
+
+	private AudioSource turretSource;
 	// Start is called before the first frame update
 	void Start()
 	{
@@ -32,11 +37,13 @@ public class BasicEnemyBehavior : MonoBehaviour {
 		spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
 		turretBase = turretBaseObject.GetComponent<SpriteRenderer>();
 		thisPos = transform.position;
+		turretSource = GetComponent<AudioSource>();
 	}
 
+
 	// Update is called once per frame
-	void Update()
-	{
+	void Update() {
+		
 		if (isWithinTrigger) {
 			// rotate towards player
 			spriteRenderer.sprite = onSprite;
@@ -46,12 +53,13 @@ public class BasicEnemyBehavior : MonoBehaviour {
 			Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 			
 //			Vector2 newDirection = Vector3.RotateTowards(transform.up, targetDirection, 15, 0.0f);
-			transform.rotation = Quaternion.Slerp(transform.rotation, rotation, 2.0f * Time.deltaTime);
+			transform.rotation = Quaternion.Slerp(transform.rotation, rotation, 2.5f * Time.deltaTime);
 			
 			// fire at player every "firerate" milliseconds
 			if(Time.time > shootTimer) {
-				shootTimer = Time.time + fireRate / 1000;
+				shootTimer = Time.time + fireRate / bulletSpeed;
 				Instantiate(bullet,muzzle.transform.position,muzzle.transform.rotation);
+				turretSource.PlayOneShot(shootSound);
 				
 			}
 		}

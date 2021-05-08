@@ -47,12 +47,17 @@ public class PlayerMovement : MonoBehaviour
 	private Animator player_anim;
 
 	private Vector2 lastPlayerPos;
-//	public AudioClip walking;
-//	public AudioClip walljump;
-//	public AudioClip jump;
-//	public AudioClip hit;
 
-//	private AudioSource playerAudio;
+	public AudioClip silence;
+	public AudioClip walking;
+	
+	public AudioClip walljump;
+	public AudioClip jump;
+	public AudioClip hit;
+
+	private AudioSource playerAudio;
+
+	private float maxVolume;
 	
     // Start is called before the first frame update
     void Start()
@@ -63,13 +68,25 @@ public class PlayerMovement : MonoBehaviour
         player_anim = gameObject.GetComponent<Animator>();
         lastPlayerPos = transform.position;
 
-//        playerAudio = GetComponent<AudioSource>();
+        playerAudio = GetComponent<AudioSource>();
+        
+        playerAudio.Play();
         
     }
-
+	
+    void Awake() {
+	    if(PlayerPrefs.HasKey("maxVolume")){	
+		    maxVolume = PlayerPrefs.GetFloat("maxVolume");
+	    }
+	    else {
+		    maxVolume = 0.35f;
+	    }
+    }
+    
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
+	    playerAudio.volume = maxVolume;
+	    Debug.Log(playerAudio.isPlaying);
         if (isAlive)
         {
             CheckInput();
@@ -77,10 +94,19 @@ public class PlayerMovement : MonoBehaviour
             CheckIfCanJump();
             CheckIfWallSliding();
             Animate();
+            PlayAudio();
 //            Debug.Log(facingDirection);
 //            Debug.Log(movementInputDirection);
 
         }
+
+        
+        
+        
+        if (!playerAudio.isPlaying) {
+	        playerAudio.Play();
+        }
+        
         
     }
 
@@ -259,21 +285,20 @@ public class PlayerMovement : MonoBehaviour
 
     private void Animate() {
 	    if(movementInputDirection != 0 && !isWallSliding) {
-//		    playerAudio.clip = walking;
 		    player_anim.SetBool("isMoving", true);
 		    
 	    }
 	    else {
+		    player_anim.SetBool("isMoving", false);
 		    
-		    player_anim.SetBool("isMoving", false); 
 	    }
         if (isWallSliding && !isGrounded)
         {
-	        
-            player_anim.SetBool("isWallSliding", true);
+	        player_anim.SetBool("isWallSliding", true);
         }
         else
         {
+	        
             player_anim.SetBool("isWallSliding", false);
         }
 
@@ -289,13 +314,30 @@ public class PlayerMovement : MonoBehaviour
 
         if (!isGrounded && rb.velocity.y != 0 && !isWallSliding)
         {
+	        
             player_anim.SetBool("isJumping", true);
         }
-        else
-        {
+        else {
+	        
             player_anim.SetBool("isJumping", false);
         }
 
+        
+
+
+    }
+
+    private void PlayAudio() {
+	    if (movementInputDirection != 0 && !isWallSliding && isGrounded) {
+		    playerAudio.clip = walking;
+	    }
+	    else {
+		    playerAudio.clip = silence;
+	    }
+
+//	    if (isJumping) {
+//		    playerAudio.PlayOneShot(jump);
+//	    }
     }
 
     public void SetLastPlayerPos(Vector2 position) {

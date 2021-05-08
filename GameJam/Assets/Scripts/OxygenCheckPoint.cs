@@ -6,7 +6,7 @@ public class OxygenCheckPoint : MonoBehaviour {
 	private AudioSource audio;
     private bool activated = false;
     private BoxCollider2D bc;
-
+    private float maxVolume;
     private string lastCheckpointName;
     // Start is called before the first frame update
     public void Start()
@@ -14,8 +14,22 @@ public class OxygenCheckPoint : MonoBehaviour {
         bc = GetComponent<BoxCollider2D>();
         audio = GetComponent<AudioSource>();
     }
-
+    
+    void Awake() {
+	    if(PlayerPrefs.HasKey("maxVolume")){	
+		    maxVolume = PlayerPrefs.GetFloat("maxVolume");
+	    }
+	    else {
+		    maxVolume = 0.35f;
+	    }
+    }
+	
     // Update is called once per frame
+    void Update() {
+	    audio.volume = 0.5f;
+    }
+    
+    
     void OnTriggerEnter2D(Collider2D other){
 
         if (other.CompareTag("Player")){
