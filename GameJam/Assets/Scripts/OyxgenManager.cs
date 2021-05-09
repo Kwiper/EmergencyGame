@@ -87,11 +87,13 @@ public class OyxgenManager : MonoBehaviour {
 
     public void jumpDeplete() {
 	    if(oxygenCountdownToggle) oxygen -= jumpSubtractTime;
+		passiveDeplete();
     }
 
 
     public void wallHopDeplete() {
-	    if(oxygenCountdownToggle) oxygen -= jumpSubtractTime;
+	    if(oxygenCountdownToggle) oxygen -= wallHopSubtractTime;
+		passiveDeplete();
     }
 
     public void moveDeplete() {
