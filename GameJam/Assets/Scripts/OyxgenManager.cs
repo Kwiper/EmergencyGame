@@ -51,6 +51,7 @@ public class OyxgenManager : MonoBehaviour {
 	public TextMeshProUGUI percentageText;
 	private AudioSource playAudio;
 	public AudioClip playerHitSound;
+	public AudioClip playerDeathSound;
 	void Start() {
 		maxOxygen = oxygen;
         oxygenBar.SetMaxOxygen(oxygen);
@@ -70,6 +71,7 @@ public class OyxgenManager : MonoBehaviour {
 	    
 	    
 	    if (oxygen <= 0) {
+		    playAudio.PlayOneShot(playerDeathSound);
 		    FindObjectOfType<PlayerMovement>().ResetPlayerToLastCheckpoint();
 		    oxygen = oxygenLastCheck;
 		    MovingPlatformArr = GameObject.FindGameObjectsWithTag("MovingPlatform");
