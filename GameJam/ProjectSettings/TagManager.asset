@@ -11,6 +11,7 @@ TagManager:
   - Elevator Points
   - Points
   - Turret
+  - OxygenPickup
   layers:
   - Default
   - TransparentFX
