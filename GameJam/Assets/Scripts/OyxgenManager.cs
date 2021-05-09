@@ -43,6 +43,7 @@ public class OyxgenManager : MonoBehaviour {
 	public float oxygenRegenCheckpointTime = 50;
 
 	private GameObject[] MovingPlatformArr;
+	private GameObject[] oxygenPickupArr;
 
 	public bool oxygenCountdownToggle;
 
@@ -73,7 +74,14 @@ public class OyxgenManager : MonoBehaviour {
 		    foreach (GameObject movingPlatform in MovingPlatformArr) {
 			    movingPlatform.GetComponent<MovingPlatform>().ResetBackToStart();
 		    }
-		    
+
+		    oxygenPickupArr = GameObject.FindGameObjectsWithTag("OxygenPickup");
+		    foreach (GameObject oxygenPickup in oxygenPickupArr) {
+			    oxygenPickup.GetComponent<CircleCollider2D>().enabled = true;
+			    oxygenPickup.GetComponent<SpriteRenderer>().enabled = false;
+		    }
+
+
 
 
 	    }
