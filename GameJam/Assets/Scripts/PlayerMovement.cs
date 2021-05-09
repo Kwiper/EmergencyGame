@@ -91,7 +91,7 @@ public class PlayerMovement : MonoBehaviour
 	    //Debug.Log(playerAudio.isPlaying);
         if (isAlive)
         {
-	        if (rb.velocity.x == 0 && rb.velocity.y == 0) {
+	        if (Input.GetAxis("Horizontal") == 0) {
 		        FindObjectOfType<OyxgenManager>().passiveDeplete();
 	        }
 	        
