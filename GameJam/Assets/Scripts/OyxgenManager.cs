@@ -80,7 +80,7 @@ public class OyxgenManager : MonoBehaviour {
 		    oxygenPickupArr = GameObject.FindGameObjectsWithTag("OxygenPickup");
 		    foreach (GameObject oxygenPickup in oxygenPickupArr) {
 			    oxygenPickup.GetComponent<CircleCollider2D>().enabled = true;
-			    oxygenPickup.GetComponent<SpriteRenderer>().enabled = false;
+			    oxygenPickup.GetComponent<SpriteRenderer>().enabled = true;
 		    }
 
 
