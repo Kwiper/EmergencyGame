@@ -13767,12 +13767,12 @@ MonoBehaviour:
   maxOxygen: 0
   oxygenCheckPointMin: 1500
   oxygenLastCheck: 0
-  passiveSubtractTime: 1
-  jumpSubtractTime: 2
+  passiveSubtractTime: 50
+  jumpSubtractTime: 10
   wallHopSubtractTime: 1.3
-  moveSubtractTime: 1.5
-  slideSubtractTime: 1.5
-  fallSubtractTime: 0.75
+  moveSubtractTime: 75
+  slideSubtractTime: 65
+  fallSubtractTime: 25
   hitByEnemySubtractTime: 1000
   oxygenRegenPickupTime: 150
   oxygenRegenCheckpointTime: 50
