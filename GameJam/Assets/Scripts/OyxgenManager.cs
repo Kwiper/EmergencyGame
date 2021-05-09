@@ -49,12 +49,14 @@ public class OyxgenManager : MonoBehaviour {
 
 	public OxygenBar oxygenBar;
 	public TextMeshProUGUI percentageText;
-	
+	private AudioSource playAudio;
+	public AudioClip playerHitSound;
 	void Start() {
 		maxOxygen = oxygen;
         oxygenBar.SetMaxOxygen(oxygen);
         oxygenLastCheck = oxygen;
-    }
+        playAudio = GetComponent<AudioSource>();
+	}
     
     void Update() {
 	    oxygenBar.SetOxygen(oxygen);
@@ -143,12 +145,13 @@ public class OyxgenManager : MonoBehaviour {
 		StartCoroutine(PlayerHit());
 		if (oxygenCountdownToggle) {
 			oxygen -= hitByEnemySubtractTime;
-			
+			playAudio.PlayOneShot(playerHitSound);
 		}
 	}
 	
 	IEnumerator PlayerHit() {
 		GameObject player = GameObject.Find("Player");
+		
 		player.GetComponent<SpriteRenderer>().color = Color.red;
 		yield return new WaitForSeconds(0.05f);
 		player.GetComponent<SpriteRenderer>().color = Color.white;
