@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 public class EndCutsceneTrigger : MonoBehaviour
@@ -55,6 +56,8 @@ public class EndCutsceneTrigger : MonoBehaviour
 	    if (other.gameObject.CompareTag("Player")) {
             Debug.Log("I happen");
             hasTriggered = true;
+            GameObject section5 = GameObject.Find("Section 5");
+            section5.GetComponent<SectionScript>().lastSection = true;
             // turn off oxygen counting down to prevent player from resetting to checkpoint and subsequently going to ending if player is low enough to die.
             FindObjectOfType<OyxgenManager>().oxygenCountdownToggle = false;
             ending.Play();

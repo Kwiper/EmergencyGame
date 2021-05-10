@@ -10,6 +10,8 @@ public class SectionScript : MonoBehaviour {
 	private float maxVolume;
 	public float overrideMaxVolume;
 	private bool triggeredEnter;
+
+	public bool lastSection;
     // Start is called before the first frame update
     void Start() {
 		
@@ -36,14 +38,19 @@ public class SectionScript : MonoBehaviour {
 			    audio.volume = maxVolume;
 		    }
 		    else if (audio.volume < maxVolume) {
-			    audio.volume += 0.2f * Time.deltaTime;
+			    audio.volume += (maxVolume * 0.6f) * Time.deltaTime;
 		    }
 	    }
 	    else if (!triggeredEnter) {
-		    if (audio.volume > 0) {
-			    audio.volume -= 0.35f * Time.deltaTime;
+		    if (lastSection) {
+			    audio.volume = 0;
 		    }
+		    else if (audio.volume > 0) {
+			    audio.volume -= (maxVolume * 0.6f) * Time.deltaTime;
+		    }
+		    
 	    }
+	    
     }
 
 //    private void OnTriggerEnter2D(Collider2D other) {
